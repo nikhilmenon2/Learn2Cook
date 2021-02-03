@@ -1,0 +1,137 @@
+#top-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: rgb(220, 217, 217);
+  width: 100%;
+  z-index: 100;
+  border-bottom: 2px solid black;
+}
+
+#nav-bar-logo-picture {
+  height: 75px;
+  margin-left: 20px;
+}
+
+#nav-bar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 200px; */
+  margin-right: 50px;
+  position: sticky;
+}
+
+
+.nav-link {
+  /* width: 200%; */
+  margin-right: 20px;
+  padding: 5px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  border: 3px solid gray;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.modal-box{
+  /* position: fixed;
+  top: 100px; */
+  background-color:  rgba(8, 59, 102, 1);
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.modal-box-wrapper{
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.541);
+  z-index: 100;
+}
+
+.modal-link {
+  margin: 5px;
+  font-size: 18px;
+  background-color: rgba(8, 59, 102, 0.7);
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  user-select: none;
+}
+
+.modal-link:hover {
+  box-shadow: 2px 2px black;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-button-box{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.modal-text{
+  color: white;
+  font-size: 22px;
+  margin:5px;
+  width:400px;
+}
+
+.modal-button{
+  color: rgb(192, 192, 192);
+  background-color: rgb(11, 75, 128);
+}
+
+.hidden{
+  display: none;
+  visibility: hidden;
+}
+
+.modal-form-div label{
+  display: block;
+  text-decoration: underline;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.modal-form-div input{
+  border-radius: 4px;
+  background-color:white;
+  font-size: 20px;
+}
+
+.modal-form-div input:focus{
+  background-color:rgb(194, 212, 228);
+  outline: none;
+}
+
+.modal-form-div input::placeholder{
+  border-radius: 10px;
+  outline: none;
+}
+
+.modal-title{
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
+  font-weight: 600;
+}

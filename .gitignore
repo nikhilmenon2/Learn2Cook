@@ -1,0 +1,6 @@
+.env
+*.py[cod]
+.venv
+.DS_Store
+.vscode
+

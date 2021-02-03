@@ -16,6 +16,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 34.82,
                                             "servings": 8,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/632250-556x370.jpg"
                                         },
                                         {
@@ -27,6 +28,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 195.19,
                                             "servings": 2,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/631807-556x370.jpg"
                                         },
                                         {
@@ -38,6 +40,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 24.75,
                                             "servings": 8,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/642041-556x370.jpg"
                                         },
                                         {
@@ -49,6 +52,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 54.61,
                                             "servings": 8,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/635058-556x370.jpg"
                                         },
                                         {
@@ -60,6 +64,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 363.51,
                                             "servings": 4,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/658579-556x370.jpg"
                                         },
                                         {
@@ -71,6 +76,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 140.59,
                                             "servings": 10,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/655525-556x370.jpg"
                                         },
                                         {
@@ -82,6 +88,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 612.16,
                                             "servings": 1,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/631890-556x370.jpg"
                                         },
                                         {
@@ -93,6 +100,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 168.22,
                                             "servings": 4,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/659934-556x370.jpg"
                                         },
                                         {
@@ -104,6 +112,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 123.98,
                                             "servings": 4,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/643241-556x370.jpg"
                                         },
                                         {
@@ -115,6 +124,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 889.37,
                                             "servings": 2,
+                                            "userId": 2,
                                             "image": "https://spoonacular.com/recipeImages/645714-556x370.jpg"
                                         },
                                         {
@@ -126,6 +136,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 274.6,
                                             "servings": 3,
+                                            "userId": 3,
                                             "image": "https://spoonacular.com/recipeImages/780001-556x370.jpg"
                                         },
                                         {
@@ -137,6 +148,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 116.12,
                                             "servings": 3,
+                                            "userId": 3,
                                             "image": "https://spoonacular.com/recipeImages/640844-556x370.jpg"
                                         },
                                         {
@@ -148,6 +160,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 262.25,
                                             "servings": 1,
+                                            "userId": 3,
                                             "image": "https://spoonacular.com/recipeImages/638071-556x370.jpg"
                                         },
                                         {
@@ -159,6 +172,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 224.72,
                                             "servings": 3,
+                                            "userId": 3,
                                             "image": "https://spoonacular.com/recipeImages/636558-556x370.jpg"
                                         },
                                         {
@@ -170,6 +184,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 489.7,
                                             "servings": 4,
+                                            "userId": 3,
                                             "image": "https://spoonacular.com/recipeImages/646217-556x370.jpg"
                                         },
                                         {
@@ -181,6 +196,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 137.32,
                                             "servings": 6,
+                                            "userId": 4,
                                             "image": "https://spoonacular.com/recipeImages/803061-556x370.jpg"
                                         },
                                         {
@@ -192,6 +208,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 76.94,
                                             "servings": 1,
+                                            "userId": 4,
                                             "image": "https://spoonacular.com/recipeImages/716424-556x370.jpg"
                                         },
                                         {
@@ -203,6 +220,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 126.12,
                                             "servings": 3,
+                                            "userId": 4,
                                             "image": "https://spoonacular.com/recipeImages/652417-556x370.jpg"
                                         },
                                         {
@@ -214,6 +232,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 66.25,
                                             "servings": 10,
+                                            "userId": 4,
                                             "image": "https://spoonacular.com/recipeImages/658914-556x370.jpg"
                                         },
                                         {
@@ -225,6 +244,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 1036.55,
                                             "servings": 1,
+                                            "userId": 4,
                                             "image": "https://spoonacular.com/recipeImages/632452-556x370.jpg"
                                         },
                                         {
@@ -236,6 +256,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 83.07,
                                             "servings": 4,
+                                            "userId": 4,
                                             "image": "https://spoonacular.com/recipeImages/644846-556x370.jpg"
                                         },
                                         {
@@ -247,6 +268,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 84.04,
                                             "servings": 1,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/716412-556x370.jpg"
                                         },
                                         {
@@ -258,6 +280,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 238.13,
                                             "servings": 8,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/641911-556x370.jpg"
                                         },
                                         {
@@ -269,6 +292,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 27.23,
                                             "servings": 24,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/639779-556x370.jpg"
                                         },
                                         {
@@ -280,6 +304,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 161.29,
                                             "servings": 8,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/634545-556x370.jpg"
                                         },
                                         {
@@ -291,6 +316,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 318.81,
                                             "servings": 3,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/715481-556x370.jpg"
                                         },
                                         {
@@ -302,6 +328,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 56.12,
                                             "servings": 15,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/649567-556x370.jpg"
                                         },
                                         {
@@ -313,6 +340,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 129.8,
                                             "servings": 4,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/716430-556x370.jpg"
                                         },
                                         {
@@ -324,6 +352,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 351.25,
                                             "servings": 4,
+                                            "userId": 6,
                                             "image": "https://spoonacular.com/recipeImages/641836-556x370.jpg"
                                         },
                                         {
@@ -335,6 +364,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 41.99,
                                             "servings": 8,
+                                            "userId": 6,
                                             "image": "https://spoonacular.com/recipeImages/646524-556x370.jpg"
                                         },
                                         {
@@ -346,6 +376,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 39.5,
                                             "servings": 4,
+                                            "userId": 6,
                                             "image": "https://spoonacular.com/recipeImages/631781-556x370.jpg"
                                         },
                                         {
@@ -357,6 +388,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 174.61,
                                             "servings": 8,
+                                            "userId": 7,
                                             "image": "https://spoonacular.com/recipeImages/634091-556x370.jpg"
                                         },
                                         {
@@ -368,6 +400,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 106.02,
                                             "servings": 2,
+                                            "userId": 5,
                                             "image": "https://spoonacular.com/recipeImages/716627-556x370.jpg"
                                         },
                                         {
@@ -390,6 +423,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 158.71,
                                             "servings": 2,
+                                            "userId": 7,
                                             "image": "https://spoonacular.com/recipeImages/716358-556x370.jpg"
                                         },
                                         {
@@ -401,6 +435,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 205.38,
                                             "servings": 4,
+                                            "userId": 7,
                                             "image": "https://spoonacular.com/recipeImages/654534-556x370.jpg"
                                         },
                                         {
@@ -412,6 +447,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 168.57,
                                             "servings": 4,
+                                            "userId": 7,
                                             "image": "https://spoonacular.com/recipeImages/715569-556x370.jpg"
                                         },
                                         {
@@ -423,6 +459,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 155.09,
                                             "servings": 4,
+                                            "userId": 7,
                                             "image": "https://spoonacular.com/recipeImages/715563-556x370.jpg"
                                         },
                                         {
@@ -434,6 +471,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 53.93,
                                             "servings": 5,
+                                            "userId": 8,
                                             "image": "https://spoonacular.com/recipeImages/715541-556x370.jpg"
                                         },
                                         {
@@ -445,6 +483,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 122.98,
                                             "servings": 3,
+                                            "userId": 9,
                                             "image": "https://spoonacular.com/recipeImages/716298-556x370.jpg"
                                         },
                                         {
@@ -456,6 +495,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 55.55,
                                             "servings": 5,
+                                            "userId": 10,
                                             "image": "https://spoonacular.com/recipeImages/636328-556x370.jpg"
                                         },
                                         {
@@ -467,6 +507,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 287.28,
                                             "servings": 4,
+                                            "userId": 10,
                                             "image": "https://spoonacular.com/recipeImages/640166-556x370.jpg"
                                         },
                                         {
@@ -478,6 +519,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 257.42,
                                             "servings": 4,
+                                            "userId": 7,
                                             "image": "https://spoonacular.com/recipeImages/633344-556x370.jpg"
                                         },
                                         {
@@ -489,6 +531,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 193.28,
                                             "servings": 6,
+                                            "userId": 8,
                                             "image": "https://spoonacular.com/recipeImages/664429-556x370.jpg"
                                         },
                                         {
@@ -500,6 +543,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 196.79,
                                             "servings": 4,
+                                            "userId": 8,
                                             "image": "https://spoonacular.com/recipeImages/657939-556x370.jpg"
                                         },
                                         {
@@ -511,6 +555,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 143.05,
                                             "servings": 6,
+                                            "userId": 8,
                                             "image": "https://spoonacular.com/recipeImages/716296-556x370.jpg"
                                         },
                                         {
@@ -522,6 +567,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 29.57,
                                             "servings": 12,
+                                            "userId": 8,
                                             "image": "https://spoonacular.com/recipeImages/659463-556x370.jpg"
                                         },
                                         {
@@ -533,6 +579,7 @@ def seed_recipes():
                                             "glutenfree": False,
                                             "pricePerServing": 646.43,
                                             "servings": 2,
+                                            "userId": 10,
                                             "image": "https://spoonacular.com/recipeImages/661531-556x370.jpg"
                                         },
                                         {
@@ -544,6 +591,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 186.02,
                                             "servings": 1,
+                                            "userId": 10,
                                             "image": "https://spoonacular.com/recipeImages/716342-556x370.jpg"
                                         },
                                         {
@@ -555,6 +603,7 @@ def seed_recipes():
                                             "glutenfree": True,
                                             "pricePerServing": 188.06,
                                             "servings": 8,
+                                            "userId": 10,
                                             "image": "https://spoonacular.com/recipeImages/715545-556x370.jpg"
                                         }
                                     ]

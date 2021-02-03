@@ -24,7 +24,7 @@ def authenticate():
     Authenticates a user.
     """
     if current_user.is_authenticated:
-        return current_user.to_dict()
+        return jsonify(current_user.to_dict())
     return {'errors': ['Unauthorized']}, 401
 
 
@@ -62,17 +62,29 @@ def sign_up():
     """
     form = SignUpForm()
     form['csrf_token'].data = request.cookies['csrf_token']
+    err = ''
+    data = request.get_json()
+    print(data)
+    if data['password'] != data['confirm_password']:
+        err = 'password and confirm password must match'
     if form.validate_on_submit():
-        user = User(
-            username=form.data['username'],
-            email=form.data['email'],
-            password=form.data['password']
-        )
-        db.session.add(user)
-        db.session.commit()
-        login_user(user)
-        return user.to_dict()
-    return {'errors': validation_errors_to_error_messages(form.errors)}
+        if err == '':
+            user = User(
+                username=form.data['username'],
+                email=form.data['email'],
+                firstName=form.data['firstName'],
+                lastName=form.data['lastName'],
+                password=form.data['password'],
+                profileImg=form.data['profileImg']
+            )
+            db.session.add(user)
+            db.session.commit()
+            login_user(user)
+            return user.to_dict()
+    errors = validation_errors_to_error_messages(form.errors)
+    if err:
+        errors.append(err)
+    return {'errors': errors}
 
 
 @auth_routes.route('/unauthorized')
