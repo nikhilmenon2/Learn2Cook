@@ -12,12 +12,11 @@ import IncompleteForm from '../auth/IncompleteForm'
 import TextForm from '../auth/TextForm'
 
 
+
 const NavBar = ({ setAuthenticated }) => {
   const modals = useSelector(state => state.modal)
   const user = useSelector(state => state.session.user)
   const dispatch = useDispatch()
- 
- 
   const openLogin = (e) => {
     dispatch(setLoginModal(true))
     dispatch(setSignupModal(false))
@@ -26,7 +25,6 @@ const NavBar = ({ setAuthenticated }) => {
     dispatch(setSignupModal(true))
     dispatch(setLoginModal(false))
   }
-
   return (
     <div id="top-nav-bar">
       <ModalContainer hidden={!modals.login} cancel={setLoginModal}>

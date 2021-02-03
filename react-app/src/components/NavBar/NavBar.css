@@ -4,14 +4,15 @@
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: rgb(220, 217, 217);
+  height: 90px;
+  background-color: white;
   width: 100%;
   z-index: 100;
   border-bottom: 2px solid black;
 }
 
 #nav-bar-logo-picture {
-  height: 75px;
+  height: 100%;
   margin-left: 20px;
 }
 
