@@ -3,10 +3,10 @@ import json
 
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random"
 
-querystring = {"number": "2"}
+querystring = {"number": "50"}
 
 headers = {
-    
+   
     'x-rapidapi-host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
 }
 
@@ -15,6 +15,12 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 data = json.loads(response.text)
 i = 0
 j = 0
+
+recipeTable = []
+instructionTable=[]
+ingredientTable=[]
+
+
 
 for recipe in data['recipes']:
     title = recipe['title']
@@ -25,7 +31,7 @@ for recipe in data['recipes']:
     glutenfree = recipe['glutenFree']
     pricePerServing = recipe['pricePerServing']
     servings = recipe['servings']
-    # image = recipe['image']
+    image = recipe['image']
 
     recipeSeed = {
         'description': description,
@@ -36,15 +42,16 @@ for recipe in data['recipes']:
         'glutenfree': glutenfree,
         'pricePerServing': pricePerServing,
         'servings': servings,
-        # 'image': image
+        'image': image
     }
-    # print(recipeSeed)
+
+    recipeTable.append(recipeSeed)
     j = j + 1
+    
     for ingredient in recipe['extendedIngredients']:
         ingredientName = ingredient['originalName']
         amount = ingredient['amount']
         unit = ingredient['unit']
-        print(unit)
         ingredientSeed = {
             'recipeId': j,
             'ingredientName': ingredientName,
@@ -53,7 +60,7 @@ for recipe in data['recipes']:
 
         }
 
-        print(ingredientSeed)
+        instructionTable.append(ingredientSeed)
     
     
     
@@ -69,4 +76,19 @@ for recipe in data['recipes']:
                 "specification": specification
 
             }
-            # print(instructionsSeed)
+            ingredientTable.append(instructionsSeed)
+
+
+# print(recipeTable)
+# print(instructionTable)
+# print(ingredientTable)
+
+
+with open('recipeTableSeeder.json', 'w') as f:
+    json.dump(recipeTable, f, indent=2)
+
+with open('instructionTableSeeder.json', 'w') as f:
+    json.dump(instructionTable, f, indent=2)
+
+with open('ingredientTable.json', 'w') as f:
+    json.dump(ingredientTable, f, indent=2)
