@@ -8,6 +8,8 @@ import Home from "./components/Home/Home";
 import { restoreUser } from "./store/session";
 import { useDispatch } from "react-redux";
 import Recipe from "./components/Recipe/Recipe";
+import UsersList from "./components/UsersList/UsersList";
+import UserProfile from "./components/UserProfile/UserProfile";
 
 
 function App() {
@@ -52,10 +54,10 @@ function App() {
         
         </Route>
         <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
-          
+          <UsersList/>
         </ProtectedRoute>
         <ProtectedRoute path="/users/:userId" exact={true} authenticated={authenticated}>
-         
+         <UserProfile/>
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
           <h1>My Home Page</h1>
