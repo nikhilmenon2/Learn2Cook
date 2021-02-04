@@ -6,19 +6,31 @@ import { useParams } from 'react-router-dom'
 
 function Recipe() {
     const dispatch = useDispatch()
-    let results = useSelector(state => state.recipes.recipesdata)
+   
+   
+    let recipe = useSelector(state => state.recipes.recipe)
+    let ingredients = useSelector(state => state.recipes.ingredients)
+
     const {recipeId}  = useParams();
 
-
+   console.log(recipe)
+   
+    
       useEffect(() => {
-        (async () => {
-            await dispatch(recipesDataDisplay(recipeId))
+        ( () => {
+             dispatch(recipesDataDisplay(recipeId))
         })();
     }, [dispatch, recipeId])
 
+    if (!recipe && !ingredients){
+        return null;
+    }
+
     return (
         <div>
-           {results} 
+        <h1>{recipe.title}</h1>
+       <h1>{recipe.description}</h1>
+       
         </div>
     )
 }
