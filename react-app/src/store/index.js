@@ -3,11 +3,13 @@ import thunk from 'redux-thunk';
 import session from './session'
 import users from './users'
 import modal from './modal'
+import recipes from './recipes'
 
 const rootReducer = combineReducers({
   session,
   users,
-  modal
+  modal,
+  recipes
 });
 
 let enhancer;

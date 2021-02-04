@@ -7,6 +7,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import Home from "./components/Home/Home";
 import { restoreUser } from "./store/session";
 import { useDispatch } from "react-redux";
+import Recipe from "./components/Recipe/Recipe";
 
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
        
         </Route>
         <Route path="/recipes/:recipeId" exact={true}> 
-          
+          <Recipe/>
         </Route>
         <Route path="/search" exact={true}>
         
