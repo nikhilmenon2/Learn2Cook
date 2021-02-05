@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import './RecipeList.css'
 function RecipeList() {
   const [recipes, setRecipes] = useState([]);
-
+  const [search, setSearch] = useState("");
+  let recipearray = recipes
+  
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("/api/recipes/");
@@ -13,19 +15,29 @@ function RecipeList() {
     fetchData();
   }, []);
 
-  const recipeComponents = recipes.map((recipe) => {
+    if (search.length > 0){
+     recipearray = recipearray.filter((i) => {
+       return i.title.toLowerCase().match(search)
+     })
+    }
+
+  const recipeComponents = recipearray.map((recipe) => {
     return (
-      <div key={recipe.id}>
+       <NavLink to={`/recipes/${recipe.id}`}>
+      <div className="individual-box" key={recipe.id}>
         <div>{recipe.title}</div>
-        <NavLink to={`/recipes/${recipe.id}`}></NavLink>
       </div>
+      </NavLink>
     );
   });
 
   return (
     <>
+    <div>
+      <input type="text" placeholder="Search" onChange={event => {event.preventDefault(); setSearch(event.target.value)}}/>
+    </div>
       <h1>Recipes: </h1>
-      <div>{recipeComponents}</div>
+      <div className="all-recipe-box">{recipeComponents}</div>
     </>
   );
 }

@@ -1,0 +1,14 @@
+.all-recipe-box{
+    width: 250px;
+  height: 75px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+
+.individual-box{
+  width: 250px;
+  height: 75px;
+  box-shadow: 2px 2px grey;
+  
+}

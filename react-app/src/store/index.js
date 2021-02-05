@@ -4,12 +4,14 @@ import session from './session'
 import users from './users'
 import modal from './modal'
 import recipes from './recipes'
+import search from './search'
 
 const rootReducer = combineReducers({
   session,
   users,
   modal,
-  recipes
+  recipes,
+  search
 });
 
 let enhancer;
