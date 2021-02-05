@@ -18,5 +18,10 @@ class Review(db.Model):
             "overall": self.overall,
             "review": self.review,
             "recipeId": self.recipeId,
-            "userId": self.userId
+            "userId": self.userId,
+            "user": { 
+                "firstName" : self.user.firstName,
+                "lastName" : self.user.lastName,
+                "profileImg" : self.user.profileImg
+            }
         }

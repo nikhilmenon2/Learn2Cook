@@ -23,8 +23,6 @@ function Recipe() {
         return null;
     }
 
- 
-
     return (
         <div>
         <h1>{recipe.title}</h1>
@@ -45,7 +43,7 @@ function Recipe() {
        <div>
             <h3>Reviews</h3>
                 {reviews.map(review=> 
-               <div>{review.review} -
+               <div>{review.review} - {review.user.firstName}
                  </div> 
             )}
             {/* {users.map(user =>

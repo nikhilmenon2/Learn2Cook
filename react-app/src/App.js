@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import Recipe from "./components/Recipe/Recipe";
 import UsersList from "./components/UsersList/UsersList";
 import UserProfile from "./components/UserProfile/UserProfile";
+import RecipeList from "./components/RecipeList/RecipeList";
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
         </Route>
         <Route path="/recipes/create" exact={true}>
        
+        </Route>
+        <Route path="/recipes/" exact={true}> 
+          <RecipeList/>
         </Route>
         <Route path="/recipes/:recipeId" exact={true}> 
           <Recipe/>

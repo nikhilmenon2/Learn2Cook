@@ -369,7 +369,7 @@ def seed_recipes():
                                         },
                                         {
                                             "description": "Need a gluten free, dairy free, lacto ovo vegetarian, and fodmap friendly dessert? Guf\" Danish Ice Cream Topping could be an excellent recipe to try. For 40 cents per serving, this recipe covers 2% of your daily requirements of vitamins and minerals. This recipe serves 4. One portion of this dish contains about 2g of protein, 0g of fat, and a total of 71 calories. 39 people were impressed by this recipe. It will be a hit at your Summer event. From preparation to the plate, this recipe takes around around 45 minutes. This recipe from Foodista requires , strawberries, sugar, and lemon juice.",
-                                            "title": "Guf\" Danish Ice Cream Topping",
+                                            "title": "Guf Danish Ice Cream Topping",
                                             "vegetarian": True,
                                             "time": 45,
                                             "cheap": False,

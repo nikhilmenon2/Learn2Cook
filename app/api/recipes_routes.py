@@ -8,23 +8,35 @@ recipes_routes = Blueprint('recipes', __name__)
 @recipes_routes.route('/<int:recipeId>')
 def recipe(recipeId):
     recipedata = Recipe.query.filter(Recipe.id == recipeId).one()
-    reviewsdata = Review.query.filter(Review.recipeId == recipeId).order_by(Review.id.desc()).all()
+    reviewsdata = Review.query.filter(Review.recipeId == recipeId).join(User, User.id == Review.userId).order_by(Review.id.desc()).all()
     ingredientsdata = Ingredient.query.filter(Ingredient.recipeId == recipeId).all()
     instructiondata = Instruction.query.filter(Instruction.recipeId == recipeId).order_by(Instruction.listOrder).all()
+    authordata = User.query.get(recipedata.userId)
+
+
     
+    print('HELLAHSLDHASHJDSAHJDLSAAJSDAS', authordata)
     recipe = recipedata.to_dict()
     review = [review.to_dict() for review in reviewsdata]
     ingredients = [ingredients.to_dict() for ingredients in ingredientsdata]
     instructions = [instruction.to_dict() for instruction in instructiondata]
+    author = authordata.to_dict()
 
     return jsonify({
         "recipe": recipe,
         "review": review,
         "ingredients": ingredients,
         "instructions": instructions,
-
+        "author": author
 
     })
+
+
+@recipes_routes.route('/')
+def getrecipes():
+    allrecipes = Recipe.query.all()
+    recipes = [recipe.to_dict() for recipe in allrecipes]
+    return jsonify({"allrecipes": recipes})
 
 
 # @recipes_routes.route('/create', methods=['POST'])
