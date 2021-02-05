@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
-// import Favorites from "./Favorites"
+import Favorites from "./Favorites"
 
 
 
 
 function User() {
     const [user, setUser] = useState({});
-    // Notice we use useParams here instead of getting the params
-    // From props.
     const { userId } = useParams();
 
     useEffect(() => {
@@ -54,7 +52,7 @@ function User() {
                 </div>
             </div>
             <div>
-                {/* <Favorites sessionUser={userState} params={userId} /> */}
+                <Favorites sessionUser={userState} params={userId} />
             </div>
 
         </>

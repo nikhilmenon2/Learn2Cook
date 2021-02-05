@@ -20,7 +20,7 @@ function RecipeList() {
 
   if (search.length > 0) {
     recipearray = recipearray.filter((i) => {
-      return i.title.toLowerCase().match(search);
+      return i.title.toLowerCase().match(search.toLowerCase());
     });
   }
 

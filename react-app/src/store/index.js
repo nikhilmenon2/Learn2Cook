@@ -5,6 +5,7 @@ import users from './users'
 import modal from './modal'
 import recipes from './recipes'
 import search from './search'
+import userFavorites from './favorites'
 
 const rootReducer = combineReducers({
   session,

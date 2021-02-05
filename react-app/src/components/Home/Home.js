@@ -1,6 +1,4 @@
 import React from 'react'
-import { setLoginModal, setSignupModal } from '../../store/modal'
-import { useDispatch } from 'react-redux'
 import sample from './TrueClip.mp4';
 import "./Home.css"
 

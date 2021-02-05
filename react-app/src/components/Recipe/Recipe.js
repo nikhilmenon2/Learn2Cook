@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { recipesDataDisplay } from "../../store/recipes";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Favorite from "./Favorite";
+import Favorite from "../Favorite/Favorite";
 import "./Recipe.css";
+import ReactStars from "react-rating-stars-component";
+
 
 function Recipe() {
   const dispatch = useDispatch();
@@ -14,6 +16,8 @@ function Recipe() {
   let reviews = useSelector((state) => state.recipes.review);
   let users = useSelector((state) => state.recipes.users);
   let authors = useSelector((state) => state.recipes.author);
+  const user = useSelector((state) => state.session.user);
+
 
   const { recipeId } = useParams();
   useEffect(() => {
@@ -37,6 +41,13 @@ function Recipe() {
     return (
       <div className="reviewbox" key={review.id}>
         <NavLink to={`/recipes/${review.user.id}`}>
+          <ReactStars
+            count={5}
+            size={24}
+            value={review.overall}
+            edit={false}
+            activeColor="#ff0000"
+          />
           <img className="picture-user" src={review.user.profileImg}></img>
         </NavLink>
         <div className="review-comment">"{review.review}"</div>
@@ -75,6 +86,7 @@ function Recipe() {
             <h3 className="time">
               <span class="bigger">Time</span> {recipe.time} Minutes
             </h3>
+            <Favorite recipeId={recipeId} user={user} />
           </div>
           <div id="picture-container">
             <p id="article-description">{recipe.description}</p>

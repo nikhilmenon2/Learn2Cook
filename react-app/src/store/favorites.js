@@ -7,7 +7,7 @@ const setUserFavorites = (userFavorites) => ({
   userFavorites
 })
 
-const addUserFavoritesAC = (payload) => ({
+const addUserFavorites = (payload) => ({
   type: ADD_FAVORITE,
   payload
 })
@@ -37,29 +37,28 @@ export const addFavorite = (recipeId, userId) => {
     response = await response.json()
 
     dispatch(
-      addUserFavoritesAC(response))
+      addUserFavorites(response))
     }
   }
 
-const deleteUserFavoriteAC = (payload) => ({
+const deleteUserFavorite = (payload) => ({
   type: DELETE_FAVORITE,
   payload
 })
 
 export const deleteFavorite = (recipeId, userId) => {
   return async (dispatch) => {
-    // debugger
     let response = await fetch(`/api/users/${userId}/favorites/${recipeId}/delete`, {
 
       method: "DELETE",
       header: {
-        "Content-Type": "applicaion.json"
+        "Content-Type": "application.json"
       },
       body: JSON.stringify({recipeId, userId})
     })
     response = await response.json()
-    // debugger
-    dispatch(deleteUserFavoriteAC(response))
+
+    dispatch(deleteUserFavorite(response))
   }
 }
 
@@ -67,21 +66,18 @@ const initialState = [];
 
 function reducer(state = initialState, action) {
   let newState;
+  debugger
   switch (action.type) {
     case SET_USER_FAVORITES:
       newState = action.userFavorites
       return newState
     case ADD_FAVORITE:
-      // newState = Object.assign()
-      // return newState;
-      // newState = Object.assign({action.payload.favorite}, state)
-      // console.log('zzzz', action.payload.recipe)
-      newState = state.push(action.payload.recipe) //what is sapposed to be in place of User
+      newState = Object.assign({}, state, { ...action.payload });
+      newState.push(action.payload.recipe)
       return newState;
     case DELETE_FAVORITE:
       newState = state.filter((fav) => {
         const ret = fav.id !== Number(action.payload.targetId)
-        // debugger: for debugger
         return ret
       })
       return newState
