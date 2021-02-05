@@ -54,7 +54,7 @@ def add_favorite(userId, recipeId):
     recipe = Recipe.query.get(recipeId)
     recipeDict = recipe.to_dict()
 
-    user.favoriterecipes.append(recipe)
+    user.favoriteRecipes.append(recipe)
     db.session.commit()
     return {"favorite": "string", "recipe": recipeDict}
 
