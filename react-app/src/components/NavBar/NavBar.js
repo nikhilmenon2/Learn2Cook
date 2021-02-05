@@ -53,6 +53,14 @@ const NavBar = ({ setAuthenticated }) => {
         </NavLink>
         {!user.id && (
           <>
+            <NavLink
+              to={`/recipes`}
+              exact={true}
+              className="nav-link"
+              activeClassName="active"
+            >
+              Recipes
+            </NavLink>
             <div
               to="/login"
               exact={true}

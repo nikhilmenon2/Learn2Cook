@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10px;
+  gap: 40px;
 }
 
 .all-recipe-box a{
@@ -19,6 +19,7 @@ text-decoration: none;
   border: grey 1px solid;
   padding-bottom: 20px;
   margin-bottom: 30px;
+  padding-right: 0;
 
 }
 .individual-box:hover{
