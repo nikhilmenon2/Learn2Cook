@@ -1,154 +1,171 @@
-.recipe {
-  padding-top: 24px;
-  padding-right: 30px;
-  padding-bottom: 24px;
-  padding-left: 30px;
-  margin-top: 0px;
-  margin-right: -10px;
-  margin-bottom: 38px;
-  margin-left: -10px;
-  background-color: #fff;
-  position: relative;
-  box-sizing: border-box;
+.recipe{
+    padding-top: 24px;
+    padding-right: 30px;
+    padding-bottom: 24px;
+    padding-left: 30px;
+    margin-top: 0px;
+    margin-right: -10px;
+    margin-bottom: 38px;
+    margin-left: -10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
 }
-#author-link {
-  text-decoration: underline;
-  color: black;
+#author-link{
+    text-decoration: underline;
+    color: black;
+   
 }
-.time {
-  padding-top: 10px;
-  font-size: 0.8em;
-  font-family: serif;
+.time{
+    padding-top:10px;
+    font-size: .8em;
+    font-family: serif;
+
 }
 .bigger {
-  color: #000;
-  display: block;
-  font-family: serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+   color: #000;
+    display: block;
+    font-family: serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+
 }
 
-#under-author {
-  width: 100%;
+
+
+#under-author{
+    width: 100%;
 }
 
-#picture-container {
-  display: flex;
-  flex-direction: row;
-  max-height: 450px;
-  min-width: 1000px;
-  max-width: 1300px;
-  justify-content: space-between;
-  padding-bottom: 75px;
-  border-bottom: 2px solid rgb(204, 204, 204);
+#picture-container{
+    display:flex;
+    flex-direction: row;
+    max-height: 450px;
+    min-width: 1000px;
+    max-width: 1300px;
+    justify-content: space-between;
+    padding-bottom: 75px;
+    border-bottom: 2px solid rgb(204,204,204)
 }
 
-#review-section {
-  padding-top: 25px;
-  display: flex;
+#review-section{
+    padding-top: 25px;
+    display: flex;
+
 }
-#filler-div {
-  width: 50%;
+#filler-div{
+    width: 50%;
 }
-.review-comment {
-  text-align: center;
-  padding-top: 30px;
-  font-size: 1.15em;
+.review-comment{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.15em;;
 }
 
-.reviewbox {
-  display: flex;
-  flex-direction: row;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  gap: 20px;
+.reviewbox{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
 }
 
-#review-parent-div {
-  display: flex;
-  flex-direction: column;
+#review-parent-div{
+    display: flex;
+    flex-direction: column;
 }
 
-#list-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 50px;
-  min-width: 600px;
-  max-width: 1300px;
-  border-bottom: 2px solid rgb(204, 204, 204);
+#list-container{
+      display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    min-width: 600px;
+    max-width: 1300px;
+    border-bottom: 2px solid rgb(204,204,204);
+    
+    
+    
 }
 
-#ingredient-container {
-  width: 50%;
-  line-height: 2;
+
+#ingredient-container{
+    width: 50%;
+    line-height: 2;
+
 }
 
-#instruction-container {
-  width: 50%;
-  padding-top: 10px;
+#instruction-container{
+    width: 50%;
+    padding-top: 10px;
+
 }
-.grid-wrap {
-  margin-top: 0px;
-  padding-right: 100px;
-  padding-left: 100px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  position: relative;
+.grid-wrap{
+    margin-top: 0px;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
 }
 
-#author {
-  font-size: 1em;
+#author{
+    font-size: 1em;
 }
 
-#author-div {
-  padding-bottom: 15px;
-  border-bottom: 2px solid rgb(204, 204, 204);
+#author-div{
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgb(204,204,204)
+
 }
-.picture-user {
-  height: 100px;
-  width: 100px;
-  border-radius: 60px;
+.picture-user{
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
 }
+
+
 
 #article-title {
-  font-family: serif;
-  font-size: 42px;
-  font-weight: 10;
-  text-transform: capitalize;
+    font-family: serif;
+    font-size: 42px;
+    font-weight: 10; 
+    text-transform: capitalize;
 }
 
-#article-description {
-  margin-top: 0%;
-  width: 40%;
-  font-family: serif;
-  font-size: 1.15em;
-  font-weight: 10;
-  line-height: 2;
+#article-description{
+    margin-top: 0%;
+    width: 40%;
+    font-family: serif;
+    font-size: 1.15em;
+    font-weight: 10; 
+    line-height: 2;
 }
 
-.heading-title {
-  font-size: 1.08em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.heading-title{
+    font-size: 1.08em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
 }
 
-#ingredient-list {
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: capitalize;
+#ingredient-list{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
 }
 
-#instructions-list {
-  font-size: 1.15em;
-  line-height: 1.5;
+
+#instructions-list{
+    font-size: 1.15em;
+    line-height: 1.5;
 }
 
-.instruction-step {
-  font-size: 1.2em;
-  font-weight: bold;
+.instruction-step{
+    font-size: 1.2em;
+    font-weight: bold;
 }
-
