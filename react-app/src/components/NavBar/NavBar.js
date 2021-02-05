@@ -40,30 +40,62 @@ const NavBar = ({ setAuthenticated }) => {
         <TextForm></TextForm>
       </ModalContainer>
       <NavLink exact to="/">
-        <img id="nav-bar-logo-picture" src={picture} alt=''/>
+        <img id="nav-bar-logo-picture" src={picture} alt="" />
       </NavLink>
       <div id="nav-bar-menu">
-        <NavLink to="/" exact={true} className="nav-link" activeClassName="active">
+        <NavLink
+          to="/"
+          exact={true}
+          className="nav-link"
+          activeClassName="active"
+        >
           Home
-          </NavLink>
-        {!user.id &&
-        <>
-        <div to="/login" exact={true} onClick={openLogin} className="nav-link" activeClassName="active">
-          Login
-          </div>
-        <div to="/sign-up" exact={true} onClick={openSignup} className="nav-link" activeClassName="active">
-            Sign Up
-          </div>
-          </>
-          }
-
-        {user.id && <>
-        <NavLink to={`/users/${user.id}`} exact={true} className="nav-link" activeClassName="active">
-        Profile
         </NavLink>
-        <LogoutButton setAuthenticated={setAuthenticated} />
-        </>}
+        {!user.id && (
+          <>
+            <div
+              to="/login"
+              exact={true}
+              onClick={openLogin}
+              className="nav-link"
+              activeClassName="active"
+            >
+              Login
+            </div>
+            <div
+              to="/sign-up"
+              exact={true}
+              onClick={openSignup}
+              className="nav-link"
+              activeClassName="active"
+            >
+              Sign Up
+            </div>
+          </>
+        )}
 
+        {user.id && (
+          <>
+            <NavLink
+              to={`/users/${user.id}`}
+              exact={true}
+              className="nav-link"
+              activeClassName="active"
+            >
+              Profile
+            </NavLink>
+
+            <NavLink
+              to={`/recipes`}
+              exact={true}
+              className="nav-link"
+              activeClassName="active"
+            >
+              Recipes
+            </NavLink>
+            <LogoutButton setAuthenticated={setAuthenticated} />
+          </>
+        )}
       </div>
     </div>
   );
