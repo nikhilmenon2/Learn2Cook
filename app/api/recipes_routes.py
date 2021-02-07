@@ -14,8 +14,6 @@ def recipe(recipeId):
     authordata = User.query.get(recipedata.userId)
 
 
-    
-    print('HELLAHSLDHASHJDSAHJDLSAAJSDAS', authordata)
     recipe = recipedata.to_dict()
     review = [review.to_dict() for review in reviewsdata]
     ingredients = [ingredients.to_dict() for ingredients in ingredientsdata]

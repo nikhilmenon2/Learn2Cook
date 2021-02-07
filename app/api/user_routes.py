@@ -73,8 +73,7 @@ def getReview(userId, recipeId):
 def postReview(userId, recipeId):
     if request:
         data = request.get_json()
-
-        overall = int(data['overall']['value'])
+        overall = data['overall']
         review = str(data['review'])
         recipeId = int(recipeId)
         userId = int(userId)

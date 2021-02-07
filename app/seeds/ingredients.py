@@ -15,7 +15,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 1,
-                                            "ingredientName": "Your favorite All Natural Tomato soup",
+                                            "ingredientName": "All Natural Tomato soup",
                                             "amount": 1.0,
                                             "unit": "can"
                                         },
@@ -231,7 +231,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "5oz thickly sliced crusty bread",
+                                            "ingredientName": "thickly sliced crusty bread",
                                             "amount": 150.0,
                                             "unit": "g"
                                         },
@@ -243,25 +243,25 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "4tbsp extra virgin olive oil",
+                                            "ingredientName": "extra virgin olive oil",
                                             "amount": 60.0,
                                             "unit": "ml"
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "2tbsp lemon juice",
+                                            "ingredientName": "lemon juice",
                                             "amount": 30.0,
                                             "unit": "ml"
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "1tsp English mustard powder",
+                                            "ingredientName": "English mustard powder",
                                             "amount": 5.0,
                                             "unit": "ml"
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "1oz freshly grated Parmesan cheese",
+                                            "ingredientName": "Freshly grated Parmesan cheese",
                                             "amount": 25.0,
                                             "unit": "g"
                                         },
@@ -273,19 +273,19 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "3tbsp sunflower oil",
+                                            "ingredientName": "sunflower oil",
                                             "amount": 45.0,
                                             "unit": "ml"
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "1tsp Tabasco sauce",
+                                            "ingredientName": "Tabasco sauce",
                                             "amount": 5.0,
                                             "unit": "ml"
                                         },
                                         {
                                             "recipeId": 7,
-                                            "ingredientName": "10ml Worcestershire sauce",
+                                            "ingredientName": "Worcestershire sauce",
                                             "amount": 2.0,
                                             "unit": "tsp"
                                         },
@@ -465,7 +465,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 11,
-                                            "ingredientName": "chicken breasts seasoned, grilled, and sliced (batch cook chicken for the week to save time!)",
+                                            "ingredientName": "chicken breasts",
                                             "amount": 16.0,
                                             "unit": "oz"
                                         },
@@ -772,7 +772,7 @@ def seed_ingredients():
                                         {
                                             "recipeId": 16,
                                             "ingredientName": "cabbage, diced",
-                                            "amount": 0.3333333333333333,
+                                            "amount": 0.33,
                                             "unit": "cup"
                                         },
                                         {
@@ -885,7 +885,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 17,
-                                            "ingredientName": "organic strawberries (my bag was 12 oz; 16 oz would be better!), thawed for about a 1/2 hour",
+                                            "ingredientName": "organic strawberries",
                                             "amount": 1.0,
                                             "unit": "bag"
                                         },
@@ -909,7 +909,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 18,
-                                            "ingredientName": "celery stalks, chopped ili 1/3 cup chopped celery root",
+                                            "ingredientName": "celery stalks",
                                             "amount": 2.0,
                                             "unit": ""
                                         },
@@ -987,7 +987,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 19,
-                                            "ingredientName": "wild mushrooms (finely diced - I used oyster)",
+                                            "ingredientName": "wild mushrooms",
                                             "amount": 2.0,
                                             "unit": "cups"
                                         },
@@ -1023,7 +1023,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 19,
-                                            "ingredientName": "wedge of beautiful brie cheese",
+                                            "ingredientName": "wedge of brie cheese",
                                             "amount": 1.0,
                                             "unit": ""
                                         },
@@ -1155,7 +1155,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 20,
-                                            "ingredientName": "Mix together until smooth. Set aside",
+                                            "ingredientName": "Mix together until smooth",
                                             "amount": 1.0,
                                             "unit": "serving"
                                         },
@@ -1179,7 +1179,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 21,
-                                            "ingredientName": "Bette Hagman's pizza/french bread flour mix (see note; I'm sure any other gluten free \"all purpose\" blend would work)",
+                                            "ingredientName": "gluten free pizza flour mix",
                                             "amount": 1.0,
                                             "unit": "cup"
                                         },
@@ -1209,7 +1209,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 21,
-                                            "ingredientName": "Oil for frying (we use canola)",
+                                            "ingredientName": "Oil for frying",
                                             "amount": 1.0,
                                             "unit": "serving"
                                         },
@@ -1239,7 +1239,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 22,
-                                            "ingredientName": "ricotta (try my easy, creamy homemade ricotta! or goat cheese would be work wonderfully, too)",
+                                            "ingredientName": "ricotta",
                                             "amount": 1.0,
                                             "unit": "serving"
                                         },
@@ -1257,13 +1257,13 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 23,
-                                            "ingredientName": "package (about refrigerated fully-cooked chicken breast strips (about 1 3/4 cups)",
+                                            "ingredientName": "Fully-cooked chicken breast strips",
                                             "amount": 10.0,
                                             "unit": "ounces"
                                         },
                                         {
                                             "recipeId": 23,
-                                            "ingredientName": "SwansonChicken Broth or Swanson Chicken Stock, heated",
+                                            "ingredientName": "Swanson Chicken Broth or Swanson Chicken Stock, heated",
                                             "amount": 4.0,
                                             "unit": "cups"
                                         },
@@ -1305,13 +1305,13 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 24,
-                                            "ingredientName": "all-purpose flour (can be omitted for people avoiding flour/wheat for passover or dietary reasons, but I",
-                                            "amount": 0.6666666666666666,
+                                            "ingredientName": "all-purpose flour",
+                                            "amount": 0.66,
                                             "unit": "cup"
                                         },
                                         {
                                             "recipeId": 24,
-                                            "ingredientName": "flaked coconut (sweetened is fine, that's how I make it and it's the easiest to find)",
+                                            "ingredientName": "flaked coconut",
                                             "amount": 5.5,
                                             "unit": "cups"
                                         },
@@ -1354,7 +1354,7 @@ def seed_ingredients():
                                         {
                                             "recipeId": 25,
                                             "ingredientName": "pineapple juice",
-                                            "amount": 0.6666666666666666,
+                                            "amount": 0.66,
                                             "unit": "cup"
                                         },
                                         {
@@ -1504,7 +1504,7 @@ def seed_ingredients():
                                         {
                                             "recipeId": 28,
                                             "ingredientName": "crumbled Gorgonzola* (or other blue cheese)",
-                                            "amount": 0.6666666666666666,
+                                            "amount": 0.66,
                                             "unit": "c"
                                         },
                                         {
@@ -1773,7 +1773,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 33,
-                                            "ingredientName": "Rotel tomatoes with diced green chilies, not drained",
+                                            "ingredientName": "Tomatoes with diced green chilies, not drained",
                                             "amount": 10.0,
                                             "unit": "ounce"
                                         },
@@ -1851,7 +1851,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 34,
-                                            "ingredientName": "olive oil (plus additional to saute mushrooms)",
+                                            "ingredientName": "olive oil",
                                             "amount": 1.0,
                                             "unit": "Tbs"
                                         },
@@ -1947,7 +1947,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 36,
-                                            "ingredientName": "cubed paneer ( Indian Cottage cheese)",
+                                            "ingredientName": "cubed paneer (Indian Cottage cheese)",
                                             "amount": 1.0,
                                             "unit": "cup"
                                         },
@@ -1995,7 +1995,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 36,
-                                            "ingredientName": "kasuri methi ( dried fenugreek leaves)",
+                                            "ingredientName": "kasuri methi (dried fenugreek leaves)",
                                             "amount": 2.0,
                                             "unit": "teaspoons"
                                         },
@@ -2109,13 +2109,13 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 38,
-                                            "ingredientName": "butter + more for mixing",
+                                            "ingredientName": "butter",
                                             "amount": 4.0,
                                             "unit": "tbsp"
                                         },
                                         {
                                             "recipeId": 38,
-                                            "ingredientName": "milk+ more for mixing",
+                                            "ingredientName": "milk",
                                             "amount": 0.5,
                                             "unit": "cup"
                                         },
@@ -2271,7 +2271,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 40,
-                                            "ingredientName": "A of Thyme",
+                                            "ingredientName": "Thyme",
                                             "amount": 1.0,
                                             "unit": "pinch"
                                         },
@@ -2283,9 +2283,9 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 40,
-                                            "ingredientName": "Cooking spoons of Vegetable Oil",
+                                            "ingredientName": "Vegetable Oil",
                                             "amount": 2.0,
-                                            "unit": ""
+                                            "unit": "teaspoons"
                                         },
                                         {
                                             "recipeId": 40,
@@ -2301,7 +2301,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 41,
-                                            "ingredientName": "sugar (add another 1/4 to 1/2 cup if you like it sweet)",
+                                            "ingredientName": "sugar",
                                             "amount": 0.5,
                                             "unit": "cup"
                                         },
@@ -2320,7 +2320,7 @@ def seed_ingredients():
                                         {
                                             "recipeId": 41,
                                             "ingredientName": "dark chocolate cocoa powder",
-                                            "amount": 0.3333333333333333,
+                                            "amount": 0.33,
                                             "unit": "cup"
                                         },
                                         {
@@ -2368,7 +2368,7 @@ def seed_ingredients():
                                         {
                                             "recipeId": 42,
                                             "ingredientName": "yellow cornmeal",
-                                            "amount": 0.3333333333333333,
+                                            "amount": 0.33,
                                             "unit": "cup"
                                         },
                                         {
@@ -2512,7 +2512,7 @@ def seed_ingredients():
                                         {
                                             "recipeId": 44,
                                             "ingredientName": "unsweetened cocoa powder",
-                                            "amount": 0.6666666666666666,
+                                            "amount": 0.66,
                                             "unit": "cup"
                                         },
                                         {
@@ -2547,7 +2547,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 44,
-                                            "ingredientName": "Chai Spice Blend (mix together)",
+                                            "ingredientName": "Chai Spice Blend",
                                             "amount": 1.0,
                                             "unit": "serving"
                                         },
@@ -2727,7 +2727,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 47,
-                                            "ingredientName": "and a pinch of baking soda",
+                                            "ingredientName": "baking soda",
                                             "amount": 0.5,
                                             "unit": "teaspoon"
                                         },
@@ -2739,7 +2739,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 47,
-                                            "ingredientName": "(or 1 stick) and 3 tablespoons cold butter, sliced",
+                                            "ingredientName": "Cold Butter",
                                             "amount": 0.5,
                                             "unit": "cup"
                                         },
@@ -2781,7 +2781,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 47,
-                                            "ingredientName": "unbleached all-purpose flour",
+                                            "ingredientName": "all-purpose flour",
                                             "amount": 2.25,
                                             "unit": "cups"
                                         },
@@ -2793,7 +2793,7 @@ def seed_ingredients():
                                         },
                                         {
                                             "recipeId": 48,
-                                            "ingredientName": "beef steak (minute steak from leg)",
+                                            "ingredientName": "beef steak",
                                             "amount": 400.0,
                                             "unit": "g"
                                         },

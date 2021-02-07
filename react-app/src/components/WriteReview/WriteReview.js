@@ -1,24 +1,14 @@
 import React, { useState } from "react";
-import Select from "react-select";
+import ReactStars from "react-stars";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setLoginModal,
   setIncompleteModal,
   setTextModal,
-} from "../../../store/modal";
+} from "../../store/modal";
 
 export default function WriteReview({ recipeId, user }) {
   const dispatch = useDispatch();
-
-  const options = (category) => {
-    return [
-      { value: "1", label: `${category} 1` },
-      { value: "2", label: `${category} 2` },
-      { value: "3", label: `${category} 3` },
-      { value: "4", label: `${category} 4` },
-      { value: "5", label: `${category} 5` },
-    ];
-  };
 
   let reviewPresent;
   let reviewId;
@@ -46,10 +36,6 @@ export default function WriteReview({ recipeId, user }) {
   }
 
   const [overall, setOverall] = useState("");
-  const [food, setFood] = useState("");
-  const [service, setService] = useState("");
-  const [ambience, setAmbience] = useState("");
-  const [value, setValue] = useState("");
   const [review, setReview] = useState("Write your review here...");
   const setReviewWrapper = (e) => {
     setReview(e.target.value);
@@ -60,14 +46,7 @@ export default function WriteReview({ recipeId, user }) {
 
     if (typeof user === "undefined" || user.id === null) {
       dispatch(setLoginModal(true));
-    } else if (
-      overall["value"] < 1 ||
-      food["value"] < 1 ||
-      service < 1 ||
-      ambience < 1 ||
-      value < 1 ||
-      review.length < 1
-    ) {
+    } else if (overall["value"] < 1 || review.length < 1) {
       // alert('Please fill out all sections of the review to complete your posting.')
       dispatch(setIncompleteModal(true));
     } else {
@@ -79,10 +58,6 @@ export default function WriteReview({ recipeId, user }) {
           },
           body: JSON.stringify({
             overall: overall,
-            food: food,
-            service: service,
-            ambience: ambience,
-            value: value,
             review: review,
           }),
         });
@@ -96,17 +71,8 @@ export default function WriteReview({ recipeId, user }) {
 
   const editReview = (e) => {
     e.preventDefault();
-    // delete the old one
-    if (
-      overall["value"] < 1 ||
-      food["value"] < 1 ||
-      service < 1 ||
-      ambience < 1 ||
-      value < 1 ||
-      review.length < 1
-    ) {
+    if (overall["value"] < 1 || review.length < 1) {
       dispatch(setIncompleteModal(true));
-      // alert('Please fill out all sections of the review to complete your posting.')
     } else {
       const editReviewHere = async () => {
         await fetch(`/api/users/${user.id}/reviews/${reviewId}`, {
@@ -117,10 +83,6 @@ export default function WriteReview({ recipeId, user }) {
           allow: "PATCH",
           body: JSON.stringify({
             overall: overall,
-            food: food,
-            service: service,
-            ambience: ambience,
-            value: value,
             review: review,
           }),
         });
@@ -130,6 +92,7 @@ export default function WriteReview({ recipeId, user }) {
       // alert('Thank you for your review!');
     }
   };
+  console.log(overall)
 
   const deleteReview = async (e) => {
     e.preventDefault();
@@ -156,41 +119,14 @@ export default function WriteReview({ recipeId, user }) {
         <h3 id="writereview_title">Update Your Review!</h3>
       )}
       <div id="writereview_dropdown-container">
-        <Select
-          options={options("Overall")}
-          className="writereview_dropdown-container-element"
-          placeholder={`Overall ${overall}`}
+        <ReactStars
+          count={5}
           value={overall}
           onChange={setOverall}
-        ></Select>
-        <Select
-          options={options("Food")}
-          className="writereview_dropdown-container-element"
-          placeholder={`Food ${food}`}
-          value={food}
-          onChange={setFood}
-        ></Select>
-        <Select
-          options={options("Service")}
-          className="writereview_dropdown-container-element"
-          placeholder={`Service ${service}`}
-          value={service}
-          onChange={setService}
-        ></Select>
-        <Select
-          options={options("Ambience")}
-          className="writereview_dropdown-container-element"
-          placeholder={`Ambience ${ambience}`}
-          value={ambience}
-          onChange={setAmbience}
-        ></Select>
-        <Select
-          options={options("Value")}
-          className="writereview_dropdown-container-element"
-          placeholder={`Value ${value}`}
-          value={value}
-          onChange={setValue}
-        ></Select>
+          size={24}
+          half={false}
+          activeColor="#ffd700"
+        />
       </div>
       <textarea
         id="writereview_textarea"
@@ -199,7 +135,7 @@ export default function WriteReview({ recipeId, user }) {
         onChange={setReviewWrapper}
       ></textarea>
       {typeof reviewPresent === "undefined" ? (
-        <button id="writereview_post" onClick={postReview}>
+        <button  id='writereview_post' onClick={postReview}>
           Post Your Review!
         </button>
       ) : (

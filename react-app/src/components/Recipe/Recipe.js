@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Favorite from "../Favorite/Favorite";
 import "./Recipe.css";
+import WriteReview from "../WriteReview/WriteReview";
 import ReactStars from "react-rating-stars-component";
 
 
@@ -37,6 +38,8 @@ function Recipe() {
     return null;
   }
 
+
+
   const reviewcomp = reviews.map((review) => {
     return (
       <div className="reviewbox" key={review.id}>
@@ -65,6 +68,8 @@ function Recipe() {
       </div>
     );
   });
+
+  const next = recipe.recipeId + 1
 
   return (
     <div className="recipe">
@@ -111,6 +116,7 @@ function Recipe() {
             <div id="filler-div"></div>
             <div>
               <h3 className="heading-title">Reviews</h3>
+              <WriteReview recipeId={recipeId} user={user} />
               <div id="review-parent-div">{reviewcomp}</div>
             </div>
           </div>
