@@ -66,14 +66,15 @@ const initialState = [];
 
 function reducer(state = initialState, action) {
   let newState;
-  debugger
   switch (action.type) {
     case SET_USER_FAVORITES:
       newState = action.userFavorites
       return newState
     case ADD_FAVORITE:
-      newState = Object.assign({}, state, { ...action.payload });
-      newState.push(action.payload.recipe)
+      // newState = Object.assign({}, state, { ...action.payload });
+      // newState.push(action.payload.recipe)
+      // return newState;
+       newState = state.push(action.payload.bar) //what is sapposed to be in place of User
       return newState;
     case DELETE_FAVORITE:
       newState = state.filter((fav) => {

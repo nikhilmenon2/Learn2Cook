@@ -83,14 +83,15 @@ function Recipe() {
               </h3>
             </a>
           </div>
-
-          <div id="under-author">
-            <h3 className="time">
-              <span class="bigger">Yield</span> {recipe.servings} Servings
-            </h3>
-            <h3 className="time">
-              <span class="bigger">Time</span> {recipe.time} Minutes
-            </h3>
+          <div id = "favorite-parent">
+            <div id="under-author">
+              <h3 className="time">
+                <span class="bigger">Yield</span> {recipe.servings} Servings
+              </h3>
+              <h3 className="time">
+                <span class="bigger">Time</span> {recipe.time} Minutes
+              </h3>
+            </div>
             <Favorite recipeId={recipeId} user={user} />
           </div>
           <div id="picture-container">

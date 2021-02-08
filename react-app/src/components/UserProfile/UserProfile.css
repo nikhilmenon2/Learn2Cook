@@ -1,0 +1,9 @@
+#profileparent{
+    width: 100%;
+    text-align:center;
+    padding-top: 30px;
+}
+
+#profile-img{
+    border-radius: 200px;
+}

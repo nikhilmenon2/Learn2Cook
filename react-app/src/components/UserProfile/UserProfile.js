@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Favorites from "./Favorites"
-
+import "./UserProfile.css"
 
 
 
@@ -39,23 +39,24 @@ function User() {
     }
 
     return (
-        <>
-            <div id="user-profile-container">
-                <div id="img-box">
-                    <img alt="nope" src={user.profileImg} />
-                </div>
-                <div id="user-info-box">
-                    <div id="user-info-text">
-                        <h3>{`${user.firstName} ${user.lastName}`}</h3>
-                        <h5>{`Username: ${user.username}`}</h5>
-                    </div>
-                </div>
+      <>
+        <div id="profileparent">
+          <div id="user-profile-container">
+            <div id="img-box">
+              <img id="profile-img" src={user.profileImg} />
             </div>
-            <div>
-                <Favorites sessionUser={userState} params={userId} />
+            <div id="user-info-box">
+              <div id="user-info-text">
+                <h3>{`${user.firstName} ${user.lastName}`}</h3>
+                <h5>{`Username: ${user.username}`}</h5>
+              </div>
             </div>
-
-        </>
+          </div>
+          <div>
+            <Favorites sessionUser={userState} params={userId} />
+          </div>
+        </div>
+      </>
     );
 }
 export default User;

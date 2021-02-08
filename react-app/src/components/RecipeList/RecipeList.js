@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import "./RecipeList.css";
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
+import { Input } from "@chakra-ui/react";
+
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([]);

@@ -4,6 +4,7 @@ import {
   addFavorite,
   deleteFavorite,
 } from "../../store/favorites";
+import './Favorite.css'
 import { setLoginModal, setTextModal } from "../../store/modal";
 
 function Favorite({ recipeId, user }) {
@@ -31,11 +32,6 @@ function Favorite({ recipeId, user }) {
   return (
     <>
       <div id="favorite-div">
-        {favoriteRecipe === true ? (
-          <h3>This Recipe Is One of Your Favorites!</h3>
-        ) : (
-          <h3>Add To Your Favorites</h3>
-        )}
         {favoriteRecipe === true ? (
           <button id="favorite-me-button" onClick={handleUnfavoriteSubmit}>
             Unfavorite Me!

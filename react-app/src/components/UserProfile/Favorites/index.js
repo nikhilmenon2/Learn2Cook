@@ -19,14 +19,14 @@ const FavoriteCards = ({ userFav, hidden, params }) => {
   return (
     <>
       <div id="card">
-        <button id="unfavorite-button" hidden={hidden} onClick={handleSubmit}>
-          unfavorite
+        <div id="bar-info-container">
+            <h4>{title}</h4>
+          <button id="unfavorite-button" hidden={hidden} onClick={handleSubmit}>
+          Un-Favorite
         </button>
+        </div>
         <NavLink to={`/recipes/${recipeId}`}>
           <img alt="nope" src={image} />
-          <div id="bar-info-container">
-            <h4>{title}</h4>
-          </div>
         </NavLink>
       </div>
     </>
@@ -55,9 +55,8 @@ const Favorites = ({ sessionUser, params }) => {
   return (
     <>
       <div id="favorite-container">
-        <h4>Users FAVORITES</h4>
+        <h4>My Favorites</h4>
         <div id="cards">
-          {!userFavorites && <p>Loading...</p>}
           {userFavorites &&
             userFavorites.map((userFav) => {
               return (
