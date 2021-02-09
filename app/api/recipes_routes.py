@@ -42,5 +42,10 @@ def getrecipes():
 @recipes_routes.route('/homerecipes')
 def gethomerecipe():
     vegdata = Recipe.query.filter(Recipe.vegetarian == True).all()
+    gfdata = Recipe.query.filter(Recipe.glutenfree == True).all()
     recipes = [recipe.to_dict() for recipe in vegdata]
-    return jsonify({"veg": recipes})
+    gf = [recipe.to_dict() for recipe in gfdata]
+    return jsonify({"veg": recipes,
+    "gf":gf
+    
+    })
