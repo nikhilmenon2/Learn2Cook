@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: rgb(255, 237, 207);
 
 }
 
@@ -29,3 +30,49 @@ video {
 .recipe-slide{
   display: flex;
 }
+
+.individual-box{
+  background-color: white;
+}
+
+
+.recipes-information-box h3{
+  text-decoration: none;
+  color: #222;
+  font-size: 1.2em;
+  line-height: 1.06em;
+}
+
+.recipes-information-box h5{
+  text-decoration: none;
+  color:rgb(216, 106, 138);
+  font-size: .8 em;
+  line-height: 1.06em;
+  font-weight: 10px;
+}
+
+.all-recipe-box a{
+text-decoration: none;
+}
+
+.link{
+  text-decoration: none;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1 {
+  color:rgb(216, 106, 138);
+}
+
+
+#home-parent-div{
+  text-align: center;
+
+}
+
+

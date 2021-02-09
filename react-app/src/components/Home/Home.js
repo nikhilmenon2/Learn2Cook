@@ -24,7 +24,7 @@ function Home() {
 
   const chickenrecipes = chickenarray.map((recipe) => {
     return (
-      <a href={`/recipes/${recipe.id}`}>
+      <a className="link" href={`/recipes/${recipe.id}`}>
         <div className="individual-box" key={recipe.id}>
           <div className="recipes-picture-box">
             <img className="recipes-picture" src={recipe.image}></img>
@@ -40,7 +40,7 @@ function Home() {
 
   const vegrecipes = vegarray.map((recipe) => {
     return (
-      <a href={`/recipes/${recipe.id}`}>
+      <a className="link" href={`/recipes/${recipe.id}`}>
         <div className="individual-box" key={recipe.id}>
           <div className="recipes-picture-box">
             <img className="recipes-picture" src={recipe.image}></img>
@@ -56,7 +56,7 @@ function Home() {
 
   const gfrecipes = gfarray.map((recipe) => {
     return (
-      <a href={`/recipes/${recipe.id}`}>
+      <a className="link" href={`/recipes/${recipe.id}`}>
         <div className="individual-box" key={recipe.id}>
           <div className="recipes-picture-box">
             <img className="recipes-picture" src={recipe.image}></img>
@@ -70,6 +70,15 @@ function Home() {
     );
   });
 
+   const breakPoints = [
+     { width: 1, itemsToShow: 1 },
+     { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
+     { width: 850, itemsToShow: 3 },
+     { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+     { width: 1450, itemsToShow: 5 },
+     { width: 1750, itemsToShow: 6 },
+   ];
+
   return (
     <div>
       <div id="videodiv">
@@ -77,12 +86,37 @@ function Home() {
           <source type="video/mp4" src={sample} />
         </video>
       </div>
-      <h1>Check out some Vegeterian Options</h1>
-      <Carousel itemsToShow={5}>{vegrecipes}</Carousel>
-      <h1>Check out some Gluten Free Options</h1>
-      <Carousel itemsToShow={5}>{gfrecipes}</Carousel>
-      <h1>Get Some Chicken Dishes Tonight</h1>
-      <Carousel itemsToShow={5}>{chickenrecipes}</Carousel>
+      <div id="home-parent-div">
+        <div id="spacing-div">
+          <h1>Check out some Vegeterian Options</h1>
+          <Carousel
+            itemsToShow={5}
+            itemPadding={[10, 50]}
+            focusOnSelect={true}
+            breakPoints={breakPoints}
+          >
+            {vegrecipes}
+          </Carousel>
+          <h1>Check out some Gluten Free Options</h1>
+          <Carousel
+            itemPadding={[10, 50]}
+            focusOnSelect={true}
+            breakPoints={breakPoints}
+            itemsToShow={5}
+          >
+            {gfrecipes}
+          </Carousel>
+          <h1>Get Some Chicken Dishes Tonight 🐔</h1>
+          <Carousel
+            itemPadding={[10, 50]}
+            focusOnSelect={true}
+            breakPoints={breakPoints}
+            itemsToShow={5}
+          >
+            {chickenrecipes}
+          </Carousel>
+        </div>
+      </div>
     </div>
   );
 }
