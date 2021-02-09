@@ -57,7 +57,6 @@ export const deleteFavorite = (recipeId, userId) => {
       body: JSON.stringify({recipeId, userId})
     })
     response = await response.json()
-
     dispatch(deleteUserFavorite(response))
   }
 }
@@ -72,11 +71,13 @@ function reducer(state = initialState, action) {
       return newState
     case ADD_FAVORITE:
       // newState = Object.assign({}, state, { ...action.payload });
-      // newState.push(action.payload.recipe)
-      // return newState;
-       newState = state.push(action.payload.bar) //what is sapposed to be in place of User
+      newState = Array.from(state)
+      newState.push(action.payload.recipe)
+      return newState;
+      //  newState = state.push(action.payload.recipe) //what is sapposed to be in place of User
       return newState;
     case DELETE_FAVORITE:
+
       newState = state.filter((fav) => {
         const ret = fav.id !== Number(action.payload.targetId)
         return ret

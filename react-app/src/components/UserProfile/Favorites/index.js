@@ -38,7 +38,7 @@ const Favorites = ({ sessionUser, params }) => {
 
   const dispatch = useDispatch();
 
-  const userFavorites = useSelector((state) => state.session.user.favoriteRecipe);
+  const userFavorites = useSelector((state) => state.userFavorites);
   const intParams = parseInt(params);
   const sessId = sessionUser.id;
 
