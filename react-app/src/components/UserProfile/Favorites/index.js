@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { fetchUserFavorites, deleteFavorite } from "../../../store/favorites";
-
+import "./Favorites.css"
 
 const FavoriteCards = ({ userFav, hidden, params }) => {
   const recipeId = userFav.id;
@@ -20,11 +20,12 @@ const FavoriteCards = ({ userFav, hidden, params }) => {
     <>
       <div id="card">
         <div id="bar-info-container">
-            <h4>{title}</h4>
           <button id="unfavorite-button" hidden={hidden} onClick={handleSubmit}>
-          Un-Favorite
-        </button>
+            Un-Favorite
+          </button>
+          <h4>{title}</h4>
         </div>
+
         <NavLink to={`/recipes/${recipeId}`}>
           <img alt="nope" src={image} />
         </NavLink>

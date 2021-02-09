@@ -6,6 +6,8 @@ import {
   setIncompleteModal,
   setTextModal,
 } from "../../store/modal";
+import './WriteReview.css'
+
 
 export default function WriteReview({ recipeId, user }) {
   const dispatch = useDispatch();
@@ -113,21 +115,15 @@ export default function WriteReview({ recipeId, user }) {
 
   return (
     <div id="writereview_container">
-      {typeof reviewPresent === "undefined" ? (
-        <h3 id="writereview_title">Write Your Review!</h3>
-      ) : (
-        <h3 id="writereview_title">Update Your Review!</h3>
-      )}
-      <div id="writereview_dropdown-container">
         <ReactStars
           count={5}
           value={overall}
           onChange={setOverall}
           size={24}
           half={false}
-          activeColor="#ffd700"
+          color2={'#ff0000'}
         />
-      </div>
+  
       <textarea
         id="writereview_textarea"
         placeholder={`${review}`}
@@ -135,7 +131,7 @@ export default function WriteReview({ recipeId, user }) {
         onChange={setReviewWrapper}
       ></textarea>
       {typeof reviewPresent === "undefined" ? (
-        <button  id='writereview_post' onClick={postReview}>
+        <button id="writereview_post" onClick={postReview}>
           Post Your Review!
         </button>
       ) : (

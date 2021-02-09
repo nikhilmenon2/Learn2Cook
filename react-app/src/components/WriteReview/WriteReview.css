@@ -1,0 +1,26 @@
+
+#writereview_post{
+border: none;
+background: #404040;
+color: #ffffff !important;
+font-weight: 100;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+margin-top: 20px;
+}
+
+#writereview_textarea{
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    cursor: text;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.6rem;
+    height: 200px;
+    line-height: 20px;
+    outline: 0;
+    padding: 13px 10px 15px 15px;
+    width: 100%;
+}

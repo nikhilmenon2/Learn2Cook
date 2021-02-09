@@ -71,12 +71,11 @@ function reducer(state = initialState, action) {
       newState = action.userFavorites
       return newState
     case ADD_FAVORITE:
-      // newState = Object.assign({}, state, { ...action.payload });
+    
       newState = Array.from(state)
       newState.push(action.payload.recipe)
       return newState;
-      //  newState = state.push(action.payload.recipe) //what is sapposed to be in place of User
-      return newState;
+      
     case DELETE_FAVORITE:
       newState = state.filter((fav) => {
         const ret = fav.id !== Number(action.payload.targetId)

@@ -1,0 +1,21 @@
+#unfavorite-button {
+  background-color: #e33d26;
+  border-radius: 3px;
+  bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 34px;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  padding-left: 32px;
+  width: 170px;
+}
+
+
+#favorite-container{
+    display: flex;
+    flex-direction: column;
+}
+
