@@ -43,9 +43,12 @@ def getrecipes():
 def gethomerecipe():
     vegdata = Recipe.query.filter(Recipe.vegetarian == True).all()
     gfdata = Recipe.query.filter(Recipe.glutenfree == True).all()
+    chickendata = Recipe.query.filter(Recipe.title.ilike("%chicken%")).all()
     recipes = [recipe.to_dict() for recipe in vegdata]
     gf = [recipe.to_dict() for recipe in gfdata]
+    chicken = [recipe.to_dict() for recipe in chickendata]
     return jsonify({"veg": recipes,
-    "gf":gf
+    "gf":gf,
+    "chicken": chicken
     
     })
