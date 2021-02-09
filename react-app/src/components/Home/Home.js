@@ -88,7 +88,7 @@ function Home() {
       </div>
       <div id="home-parent-div">
         <div id="spacing-div">
-          <h1>Check out some Vegeterian Options</h1>
+          <h1>🥬 Check out some Vegeterian Options 🥬</h1>
           <Carousel
             itemsToShow={5}
             itemPadding={[10, 50]}
@@ -97,7 +97,7 @@ function Home() {
           >
             {vegrecipes}
           </Carousel>
-          <h1>Check out some Gluten Free Options</h1>
+          <h1>🌾 Check out some Gluten Free Options 🌾 </h1>
           <Carousel
             itemPadding={[10, 50]}
             focusOnSelect={true}
@@ -106,7 +106,7 @@ function Home() {
           >
             {gfrecipes}
           </Carousel>
-          <h1>Get Some Chicken Dishes Tonight 🐔</h1>
+          <h1>🐔 Get Some Chicken Dishes Tonight 🐔</h1>
           <Carousel
             itemPadding={[10, 50]}
             focusOnSelect={true}
