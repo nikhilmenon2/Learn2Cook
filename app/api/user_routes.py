@@ -26,15 +26,13 @@ def userNoAuth(id):
 
 @user_routes.route('/<int:id>/favorites')
 def userfavorites(id):
-    user = User.query.get(int(id))
-    recipes = user.to_dict()["favoriteRecipes"]
+    user = User.query.get(id)
+    recipes = user.to_dict()["favoriteRecipe"]
     return {"favorites": recipes}
 
 
 @user_routes.route('/<int:userId>/favorites/<int:recipeId>/delete', methods=["DELETE"])
 def delete_favorite(userId, recipeId):
-    userId = int(userId)
-    recipeId = int(recipeId)
     user = User.query.get(userId)
     recipe = Recipe.query.get(recipeId)
     user.favoriteRecipes.remove(recipe)

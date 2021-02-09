@@ -34,7 +34,6 @@ const FavoriteCards = ({ userFav, hidden, params }) => {
 };
 
 const Favorites = ({ sessionUser, params }) => {
-  const [deleteHidden, setDeleteHidden] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -43,13 +42,7 @@ const Favorites = ({ sessionUser, params }) => {
   const sessId = sessionUser.id;
 
   useEffect(() => {
-    dispatch(fetchUserFavorites(params));
-
-    if (sessId === intParams) {
-      setDeleteHidden(false);
-    } else {
-      setDeleteHidden(true);
-    }
+    dispatch(fetchUserFavorites(intParams))
   }, [dispatch]);
 
   return (
@@ -63,7 +56,6 @@ const Favorites = ({ sessionUser, params }) => {
                 <FavoriteCards
                   userFav={userFav}
                   params={params}
-                  hidden={deleteHidden}
                   key={userFav.id}
                 />
               );

@@ -16,6 +16,7 @@ export const fetchUserFavorites = (userId) => {
   return async(dispatch) => {
     const response = await fetch(`/api/users/${userId}/favorites`)
     const data = await response.json()
+    debugger
     dispatch(
       setUserFavorites(data.favorites)
     )
@@ -77,12 +78,12 @@ function reducer(state = initialState, action) {
       //  newState = state.push(action.payload.recipe) //what is sapposed to be in place of User
       return newState;
     case DELETE_FAVORITE:
-
       newState = state.filter((fav) => {
         const ret = fav.id !== Number(action.payload.targetId)
         return ret
       })
       return newState
+      
     default:
       return state;
   }

@@ -29,6 +29,7 @@ function Favorite({ recipeId, user }) {
 
 
     let session = useSelector((state) => state.session);
+  
 
     useEffect(() => {
       if (user.id !== null) {
