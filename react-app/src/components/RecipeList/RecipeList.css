@@ -28,11 +28,19 @@ text-decoration: none;
 
   
 }
+
+.fas fa-search{
+  height: 28px;
+}
 #search-bar{
   width: 600px;
   height: 50x;
+  margin-left: 10px;
 }
 
+#search-parent h1 {
+  font-size: 48px;
+}
 
 #search-parent{
     width: 100%;

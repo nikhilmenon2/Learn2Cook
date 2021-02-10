@@ -52,12 +52,12 @@ function Favorite({ recipeId, user }) {
     <>
       <div id="favorite-div">
         {favoriteRecipe === true ? (
-          <button id="favorite-me-button" onClick={handleUnfavoriteSubmit}>
-            Unfavorite Me!
+          <button className="favorite-button" onClick={handleUnfavoriteSubmit}>
+            Unfavorite
           </button>
         ) : (
-          <button id="favorite-me-button" onClick={handleFavoriteSubmit}>
-            Favorite Me!
+          <button className="favorite-button" onClick={handleFavoriteSubmit}>
+            Favorite
           </button>
         )}
       </div>

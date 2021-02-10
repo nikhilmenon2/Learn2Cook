@@ -15,6 +15,12 @@
   margin-left: 20px;
 }
 
+#logout{
+  border: none;
+  height: 58px;
+  width: 100%;
+}
+
 #nav-bar-menu {
   display: flex;
   align-items: center;
@@ -26,25 +32,23 @@
 
 .nav-link {
   margin-right: 20px;
-  color: #fff !important;
+  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   background: rgb(255, 76, 76);
   padding: 20px;
   border-radius: 5px;
   display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
 }
 
 .modal-box {
-  /* position: fixed;
-  top: 100px; */
-  background-color: rgba(8, 59, 102, 1);
+  background-color: rgb(255, 237, 207);
   padding: 20px;
   border: 2px solid black;
   border-radius: 10px;
   z-index: 100;
+  width: 300px;
+
 }
 
 .modal-box-wrapper {
@@ -73,7 +77,7 @@
 
 .modal-link:hover {
   box-shadow: 2px 2px black;
-  color: white;
+  color: rgb(255, 76, 76);
   cursor: pointer;
 }
 
@@ -84,14 +88,14 @@
 }
 
 .modal-text {
-  color: white;
+  color: rgb(255, 76, 76);
   font-size: 22px;
   margin: 5px;
   width: 400px;
 }
 
 .modal-button {
-  color: rgb(192, 192, 192);
+  color: rgb(255, 237, 207);
   background-color: rgb(11, 75, 128);
 }
 
@@ -104,7 +108,7 @@
   display: block;
   text-decoration: underline;
   font-size: 26px;
-  color: white;
+  color:rgb(255, 76, 76);
   margin-bottom: 5px;
   margin-top: 5px;
 }
@@ -127,8 +131,7 @@
 
 .modal-title {
   text-align: center;
-  color: white;
+  color: rgb(255, 76, 76);
   font-size: 30px;
-  text-decoration: underline;
   font-weight: 600;
 }

@@ -47,9 +47,9 @@ function RecipeList() {
   return (
     <>
       <div id="search-parent">
-        <h1>Recipes </h1>
+        <h1>Recipes</h1>
         <div id="search-container">
-          <i class="fas fa-search"></i>
+          <i class="fas fa-search fa-lg"></i>
           <Input
             id="search-bar"
             type="text"

@@ -1,19 +1,12 @@
-#favorite-me-button{
-        background-color: #e33d26;
-    border-radius: 3px;
-    border-right: 1px solid #e65f51;
-    bottom: 20px;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    float: left;
-    font-size: .8rem;
-    font-weight: 500;
-    height: 34px;
-    letter-spacing: .6px;
-    line-height: 36px;
-    padding-left: 32px;
-    width: 170px;
+.favorite-button{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgb(255, 76, 76);
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
 }
 
 #favorite-div{
