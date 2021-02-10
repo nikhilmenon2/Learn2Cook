@@ -3,7 +3,6 @@
     padding-right: 30px;
     padding-bottom: 24px;
     padding-left: 30px;
-
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -13,6 +12,17 @@
     text-decoration: underline;
     color: black;
    
+}
+
+#parent-recipe-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.side-gold {
+    background-color: rgb(255, 237, 207);
+    width: 300px;
+
 }
 
 body { margin:0; }

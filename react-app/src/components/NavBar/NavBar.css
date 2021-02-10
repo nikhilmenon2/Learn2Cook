@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  height: 90px;
+  height: 130px;
   background-color: white;
   width: 100%;
   z-index: 100;
@@ -24,33 +24,30 @@
   position: sticky;
 }
 
-
 .nav-link {
-  /* width: 200%; */
   margin-right: 20px;
-  padding: 5px;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  border: 3px solid gray;
+  color: #fff !important;
+  text-transform: uppercase;
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
-  cursor: pointer;
+  background: rgb(255, 76, 76);
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
 }
 
-
-.modal-box{
+.modal-box {
   /* position: fixed;
   top: 100px; */
-  background-color:  rgba(8, 59, 102, 1);
+  background-color: rgba(8, 59, 102, 1);
   padding: 20px;
   border: 2px solid black;
   border-radius: 10px;
   z-index: 100;
 }
 
-.modal-box-wrapper{
+.modal-box-wrapper {
   position: fixed;
   width: 100%;
   right: 0;
@@ -80,30 +77,30 @@
   cursor: pointer;
 }
 
-.modal-button-box{
+.modal-button-box {
   display: flex;
   justify-content: center;
   margin: 10px;
 }
 
-.modal-text{
+.modal-text {
   color: white;
   font-size: 22px;
-  margin:5px;
-  width:400px;
+  margin: 5px;
+  width: 400px;
 }
 
-.modal-button{
+.modal-button {
   color: rgb(192, 192, 192);
   background-color: rgb(11, 75, 128);
 }
 
-.hidden{
+.hidden {
   display: none;
   visibility: hidden;
 }
 
-.modal-form-div label{
+.modal-form-div label {
   display: block;
   text-decoration: underline;
   font-size: 26px;
@@ -112,23 +109,23 @@
   margin-top: 5px;
 }
 
-.modal-form-div input{
+.modal-form-div input {
   border-radius: 4px;
-  background-color:white;
+  background-color: white;
   font-size: 20px;
 }
 
-.modal-form-div input:focus{
-  background-color:rgb(194, 212, 228);
+.modal-form-div input:focus {
+  background-color: rgb(194, 212, 228);
   outline: none;
 }
 
-.modal-form-div input::placeholder{
+.modal-form-div input::placeholder {
   border-radius: 10px;
   outline: none;
 }
 
-.modal-title{
+.modal-title {
   text-align: center;
   color: white;
   font-size: 30px;
