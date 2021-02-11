@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function UsersList() {
+function UsersList({ authenticated, setAuthenticated }) {
+  
+  
+  
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -16,11 +19,15 @@ function UsersList() {
   const userComponents = users.map((user) => {
     return (
       <div key={user.id}>
-        <NavLink id="author-link" to={`/users/${user.id}`} style={{ textDecoration: 'none' },{ color:'black'}}>
+        <NavLink
+          id="author-link"
+          to={`/users/${user.id}`}
+          style={({ textDecoration: "none" }, { color: "black" })}
+        >
           <div>
-          <img src={user.profileImg}></img>
+            <img src={user.profileImg}></img>
           </div>
-          </NavLink>
+        </NavLink>
       </div>
     );
   });

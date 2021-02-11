@@ -7,6 +7,8 @@ import { setLoginModal, setTextModal } from "../../store/modal";
 
 function Favorite({ recipeId, user }) {
   let [favoriteRecipe, setFavoriteRecipe] = useState(false);
+
+  
   const dispatch = useDispatch();
 
   const handleFavoriteSubmit = async (e) => {

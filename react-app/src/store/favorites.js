@@ -16,7 +16,6 @@ export const fetchUserFavorites = (userId) => {
   return async(dispatch) => {
     const response = await fetch(`/api/users/${userId}/favorites`)
     const data = await response.json()
-    debugger
     dispatch(
       setUserFavorites(data.favorites)
     )

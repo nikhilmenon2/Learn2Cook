@@ -38,7 +38,7 @@ export default function WriteReview({ recipeId, user }) {
   }
 
   const [overall, setOverall] = useState("");
-  const [review, setReview] = useState("Write your review here...");
+  const [review, setReview] = useState("");
   const setReviewWrapper = (e) => {
     setReview(e.target.value);
   };
@@ -126,7 +126,7 @@ export default function WriteReview({ recipeId, user }) {
   
       <textarea
         id="writereview_textarea"
-        placeholder={`${review}`}
+        placeholder={"Please Comment Here"}
         value={review}
         onChange={setReviewWrapper}
       ></textarea>

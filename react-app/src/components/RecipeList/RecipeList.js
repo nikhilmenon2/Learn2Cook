@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./RecipeList.css";
-import { Input } from "@chakra-ui/react";
-
+import { Checkbox, Input } from "@chakra-ui/react";
+// import CheckBox from "./CheckBox/CheckBox";
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
+  const [vegetarian, setVegetarian] = useState(false);
+  const [glutenfree, setGlutenFree] = useState(false);
   let recipearray = recipes;
 
   useEffect(() => {
@@ -17,11 +19,31 @@ function RecipeList() {
     fetchData();
   }, []);
 
+  if (vegetarian === true) {
+    recipearray = recipearray.filter((i) => {
+      return i.vegetarian == true;
+    });
+  }
+
+  if (glutenfree === true) {
+    recipearray = recipearray.filter((i) => {
+      return i.glutenfree == true;
+    });
+  }
+
   if (search.length > 0) {
     recipearray = recipearray.filter((i) => {
       return i.title.toLowerCase().match(search.toLowerCase());
     });
   }
+
+    const HandleChange = (event) => {
+      event.preventDefault();
+      setSearch(event.target.value);
+    };
+
+    const handleClick = () => setVegetarian(!vegetarian);
+    const handleClick1 = () => setGlutenFree(!glutenfree);
 
   const recipeComponents = recipearray.map((recipe) => {
     return (
@@ -39,15 +61,28 @@ function RecipeList() {
     );
   });
 
-  const HandleChange = (event) => {
-    event.preventDefault();
-    setSearch(event.target.value);
-  };
 
   return (
     <>
       <div id="search-parent">
         <h1>Recipes</h1>
+        <div>
+          <label>Vegeterian</label>
+          <input
+            name="vegeterian"
+            type="checkbox"
+            checked={vegetarian}
+            onClick={handleClick}
+          />
+          <label>Gluten Free</label>
+          <input
+            name="glutenfree"
+            type="checkbox"
+            checked={glutenfree}
+            onClick={handleClick1}
+          />
+        </div>
+        {/* <CheckBox /> */}
         <div id="search-container">
           <i class="fas fa-search fa-lg"></i>
           <Input

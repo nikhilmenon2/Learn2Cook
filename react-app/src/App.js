@@ -11,6 +11,7 @@ import Recipe from "./components/Recipe/Recipe";
 import UsersList from "./components/UsersList/UsersList";
 import UserProfile from "./components/UserProfile/UserProfile";
 import RecipeList from "./components/RecipeList/RecipeList";
+import CreateRecipe from "./components/CreateRecipe/CreateRecipe";
 
 
 function App() {
@@ -45,17 +46,14 @@ function App() {
         <Route path="/sign-up" exact={true}>
           <SignUpForm authenticated={authenticated} setAuthenticated={setAuthenticated} />
         </Route>
-        <Route path="/recipes/create" exact={true}>
-       
+        <Route path="/recipes/create" exact={true} setAuthenticated={setAuthenticated}>
+        <CreateRecipe/>
         </Route>
         <Route path="/recipes/" exact={true}> 
           <RecipeList/>
         </Route>
         <Route path="/recipes/:recipeId" exact={true}> 
           <Recipe/>
-        </Route>
-        <Route path="/search" exact={true}>
-        
         </Route>
         <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
           <UsersList/>

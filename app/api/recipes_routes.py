@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, redirect
 from app.models import db, Recipe, Review, User, Ingredient, Instruction
 import json
 
@@ -26,8 +26,6 @@ def recipe(recipeId):
         "ingredients": ingredients,
         "instructions": instructions,
         "author": author,
-       
-
 
     })
 
@@ -52,3 +50,13 @@ def gethomerecipe():
     "chicken": chicken
     
     })
+
+
+@recipes_routes.route('/create', methods=['POST'])
+def create():
+    data = request.get_json(force=True)
+    print(data)
+    newRecipe = Recipe(**data)
+    db.session.add(newRecipe)
+    db.session.commit()
+    return redirect('/')
