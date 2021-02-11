@@ -8,7 +8,7 @@
   display: inline-block;
   border: none;
   width: 55%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 
@@ -24,7 +24,7 @@
 }
 
 #card {
-  background-color: #729EA1;
+  background-color:#fffafa;
   border-radius: 30px;
   width: 350px;
   height: 350px;
@@ -37,7 +37,7 @@
 }
 
 #card h4 {
-  color: #EC9192 ;
+  color: black;
   font-size: 20px;
 }
 
@@ -50,3 +50,9 @@
   height: 200px;
   width: 200px;
 }
+
+#title-favorites{
+font-size: 1.8em;
+color: rgb(255, 76, 76)
+}
+

@@ -28,7 +28,7 @@ const FavoriteCards = ({ userFav, hidden, params }) => {
             </NavLink>
           </div>
           <button id="unfavorite-button" hidden={hidden} onClick={handleSubmit}>
-            Un-Favorite
+            UnFavorite
           </button>
         </div>
     </>
@@ -49,7 +49,7 @@ const Favorites = ({ sessionUser, params }) => {
 
   return (
     <>
-      <h4>My Favorites</h4>
+      <h4 id="title-favorites">Favorites</h4>
       <div id="favorite-container">
         <div id="cards">
           {userFavorites &&

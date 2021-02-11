@@ -43,12 +43,11 @@ function User() {
         <div id="profileparent">
           <div id="user-profile-container">
             <div id="img-box">
-              <img id="profile-img" src={user.profileImg} />
+              <img className="profile-img" src={user.profileImg} />
             </div>
             <div id="user-info-box">
               <div id="user-info-text">
                 <h3>{`${user.firstName} ${user.lastName}`}</h3>
-                <h5>{`Username: ${user.username}`}</h5>
               </div>
             </div>
           </div>

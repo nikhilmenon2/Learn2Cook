@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import './UsersList.css'
+
 
 function UsersList({ authenticated, setAuthenticated }) {
   
@@ -18,14 +20,15 @@ function UsersList({ authenticated, setAuthenticated }) {
 
   const userComponents = users.map((user) => {
     return (
-      <div key={user.id}>
+      <div className="authordiv"  key={user.id}>
         <NavLink
           id="author-link"
           to={`/users/${user.id}`}
           style={({ textDecoration: "none" }, { color: "black" })}
         >
           <div>
-            <img src={user.profileImg}></img>
+            <img className="profile-img" src={user.profileImg}></img>
+            <h3>{`${user.firstName} ${user.lastName}`}</h3>
           </div>
         </NavLink>
       </div>
@@ -34,8 +37,10 @@ function UsersList({ authenticated, setAuthenticated }) {
 
   return (
     <>
-      <h1>Authors: </h1>
-      <ul>{userComponents}</ul>
+      <div id="userparent">
+        <h1>Chefs at Learn2Cook </h1>
+        <div id="authorcontainer">{userComponents}</div>
+      </div>
     </>
   );
 }

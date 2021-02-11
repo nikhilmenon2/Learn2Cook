@@ -4,6 +4,27 @@
     padding-top: 30px;
 }
 
-#profile-img{
+.profile-img{
     border-radius: 200px;
+}
+
+
+#user-info-text h3{
+  font-size: 2.5em;
+}
+
+
+.authordiv{
+  height: 300px;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+#authorcontainer{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding-left: 100px;
+padding-right: 100px;
+gap: 30px;
 }
