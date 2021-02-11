@@ -69,7 +69,6 @@ function Recipe() {
     );
   });
 
-  const next = recipe.recipeId + 1
 
   return (
     <div id="parent-recipe-div">

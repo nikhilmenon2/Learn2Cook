@@ -66,24 +66,23 @@ function RecipeList() {
     <>
       <div id="search-parent">
         <h1>Recipes</h1>
-        <div>
-          <label>Vegeterian</label>
-          <input
-            name="vegeterian"
-            type="checkbox"
-            checked={vegetarian}
-            onClick={handleClick}
-          />
-          <label>Gluten Free</label>
-          <input
-            name="glutenfree"
-            type="checkbox"
-            checked={glutenfree}
-            onClick={handleClick1}
-          />
-        </div>
-        {/* <CheckBox /> */}
         <div id="search-container">
+
+            <label>Vegeterian</label>
+            <input
+              name="vegeterian"
+              type="checkbox"
+              checked={vegetarian}
+              onClick={handleClick}
+            />
+            <label>Gluten Free</label>
+            <input
+              name="glutenfree"
+              type="checkbox"
+              checked={glutenfree}
+              onClick={handleClick1}
+            />
+
           <i class="fas fa-search fa-lg"></i>
           <Input
             id="search-bar"

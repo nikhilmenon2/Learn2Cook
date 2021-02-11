@@ -11,32 +11,7 @@ import './WriteReview.css'
 
 export default function WriteReview({ recipeId, user }) {
   const dispatch = useDispatch();
-
-  let reviewPresent;
   let reviewId;
-  const recipes = useSelector((state) => state.recipes);
-  if (
-    recipes !== null &&
-    typeof recipes !== "undefined" &&
-    typeof recipes["1"] !== "undefined"
-  ) {
-    const reviews = recipes["1"]["reviews"];
-    for (const review of reviews) {
-      if (review["userId"] === user.id) {
-        reviewPresent = review;
-        reviewId = review["id"];
-        break;
-      }
-    }
-  }
-
-  let overallPlaceholder;
-
-  if (reviewPresent !== undefined) {
-    console.log("here", reviewPresent);
-    overallPlaceholder = reviewPresent["overall"];
-  }
-
   const [overall, setOverall] = useState("");
   const [review, setReview] = useState("");
   const setReviewWrapper = (e) => {
@@ -45,11 +20,9 @@ export default function WriteReview({ recipeId, user }) {
 
   const postReview = (e) => {
     e.preventDefault();
-
     if (typeof user === "undefined" || user.id === null) {
       dispatch(setLoginModal(true));
     } else if (overall["value"] < 1 || review.length < 1) {
-      // alert('Please fill out all sections of the review to complete your posting.')
       dispatch(setIncompleteModal(true));
     } else {
       const postReviewHere = async () => {
@@ -67,10 +40,10 @@ export default function WriteReview({ recipeId, user }) {
       postReviewHere();
 
       dispatch(setTextModal(true));
-      // alert('Thank you for your review!')
     }
   };
 
+  
   const editReview = (e) => {
     e.preventDefault();
     if (overall["value"] < 1 || review.length < 1) {
@@ -91,14 +64,13 @@ export default function WriteReview({ recipeId, user }) {
       };
       editReviewHere();
       dispatch(setTextModal(true));
-      // alert('Thank you for your review!');
+    ;
     }
   };
-  console.log(overall)
+
 
   const deleteReview = async (e) => {
     e.preventDefault();
-
     await fetch(`/api/users/${user.id}/reviews/${reviewId}`, {
       method: "DELETE",
       headers: {
@@ -107,10 +79,6 @@ export default function WriteReview({ recipeId, user }) {
     });
 
     dispatch(setTextModal(true));
-
-    // clear the stars and review box
-    // reset the buttons
-    // I want to re-run both.
   };
 
   return (
@@ -123,35 +91,15 @@ export default function WriteReview({ recipeId, user }) {
           half={false}
           color2={'#ff0000'}
         />
-  
       <textarea
         id="writereview_textarea"
         placeholder={"Please Comment Here"}
         value={review}
         onChange={setReviewWrapper}
       ></textarea>
-      {typeof reviewPresent === "undefined" ? (
         <button id="writereview_post" onClick={postReview}>
           Post Your Review!
         </button>
-      ) : (
-        <div id="writereview_post-and-delete-buttons">
-          <button
-            id="writereview_post"
-            className="writereview_edit"
-            onClick={editReview}
-          >
-            Edit Your Review!
-          </button>
-          <button
-            id="writereview_post"
-            className="writereview_delete"
-            onClick={deleteReview}
-          >
-            Delete Your Review!
-          </button>
-        </div>
-      )}
     </div>
   );
 }
