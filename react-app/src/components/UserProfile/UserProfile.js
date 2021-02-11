@@ -52,9 +52,7 @@ function User() {
               </div>
             </div>
           </div>
-          <div>
             <Favorites sessionUser={userState} params={userId} />
-          </div>
         </div>
       </>
     );
