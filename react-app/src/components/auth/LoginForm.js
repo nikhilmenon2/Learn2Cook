@@ -20,9 +20,6 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     dispatch(setSignupModal(true));
     dispatch(setLoginModal(false));
   };
-  const cancel = (e) => {
-    dispatch(setLoginModal(false));
-  };
 
    useOutsideClick(ref, () => {
       dispatch(setLoginModal(false));
@@ -99,10 +96,6 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
             <div className="modal-link modal-button" onClick={openSignup}>
               {" "}
               Sign Up
-            </div>
-            <div className="modal-link modal-button" onClick={cancel}>
-              {" "}
-              Close
             </div>
           </div>
           <div className="modal-button-box">

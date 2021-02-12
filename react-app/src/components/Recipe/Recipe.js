@@ -7,6 +7,7 @@ import Favorite from "../Favorite/Favorite";
 import "./Recipe.css";
 import WriteReview from "../WriteReview/WriteReview";
 import ReactStars from "react-rating-stars-component";
+import Footer from "../Footer/index";
 
 
 function Recipe() {
@@ -18,7 +19,6 @@ function Recipe() {
   let users = useSelector((state) => state.recipes.users);
   let authors = useSelector((state) => state.recipes.author);
   const user = useSelector((state) => state.session.user);
-
 
   const { recipeId } = useParams();
   useEffect(() => {
@@ -37,8 +37,6 @@ function Recipe() {
   ) {
     return null;
   }
-
-
 
   const reviewcomp = reviews.map((review) => {
     return (
@@ -125,6 +123,7 @@ function Recipe() {
           </article>
         </div>
       </div>
+      <Footer/>
       <div className="side-gold"></div>
     </div>
   );

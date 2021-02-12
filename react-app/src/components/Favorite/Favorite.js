@@ -4,9 +4,8 @@ import {
   addFavorite,
   deleteFavorite,
 } from "../../store/favorites";
-
 import "./Favorite.css";
-import { setLoginModal, setTextModal } from "../../store/modal";
+import { setLoginModal } from "../../store/modal";
 
 function Favorite({ recipeId, user }) {
   let [favoriteRecipe, setFavoriteRecipe] = useState(false);

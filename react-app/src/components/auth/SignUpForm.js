@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../services/auth';
 import { setLoginModal, setSignupModal } from '../../store/modal'
 import { useDispatch } from 'react-redux'
+import useOutsideClick from "../OutsideClick/UseOutsideClick";
 
 const SignUpForm = ({authenticated, setAuthenticated}) => {
   const [errors, setErrors] = useState([]);
@@ -14,15 +15,17 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   const [profileImg, setProfileImg] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
   const dispatch = useDispatch()
+  const ref = useRef();
 
   const openLogin = (e) => {
     dispatch(setSignupModal(false))
     dispatch(setLoginModal(true))
   }
-  const cancel = (e) => {
-    dispatch(setSignupModal(false))
-  }
-
+ 
+   useOutsideClick(ref, () => {
+     dispatch(setSignupModal(false));
+   });
+   
   const onSignUp = async (e) => {
     e.preventDefault();
 
@@ -69,84 +72,89 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   }
 
   return (
-
-    <form onSubmit={onSignUp}>
-      <h1 className='modal-title'>Sign Up</h1>
-      <div>
-        {errors.map((error) => (
-          <div>{error}</div>
-        ))}
-      </div>
-      <div className='modal-form-div'>
-        <label>First Name</label>
-        <input
-          type="text"
-          name="firstName"
-          onChange={updateFirstName}
-          value={firstName}
-        ></input>
-      </div>
-      <div className='modal-form-div'>
-        <label>Last Name</label>
-        <input
-          type="text"
-          name="lastName"
-          onChange={updateLastName}
-          value={lastName}
-        ></input>
-      </div>
-      <div className='modal-form-div'>
-        <label>User Name</label>
-        <input
-          type="text"
-          name="username"
-          onChange={updateUsername}
-          value={username}
-        ></input>
-      </div>
-      <div className='modal-form-div'>
-        <label>Email</label>
-        <input
-          type="text"
-          name="email"
-          onChange={updateEmail}
-          value={email}
-        ></input>
-      </div>
-      <div className='modal-form-div'>
-        <label>Profile Image</label>
-        <input
-          type="text"
-          name="profileImg"
-          onChange={updateProfileImg}
-          value={profileImg}
-        ></input>
-      </div>
-      <div className='modal-form-div'>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          onChange={updatePassword}
-          value={password}
-        ></input>
-      </div>
-      <div className='modal-form-div'>
-        <label>Repeat Password</label>
-        <input
-          type="password"
-          name="repeat_password"
-          onChange={updateRepeatPassword}
-          value={repeatPassword}
-          required={true}
-        ></input>
-      </div>
-      <div className='modal-button-box'>
-          <div className='modal-link modal-button' onClick={onSignUp}>Sign Up</div>
-          <div className='modal-link modal-button' onClick={openLogin}> Log In</div>
-          <div className='modal-link modal-button' onClick={cancel}> Close</div>
+    <div ref={ref}>
+      <form onSubmit={onSignUp}>
+        <h1 className="modal-title">Sign Up</h1>
+        <div>
+          {errors.map((error) => (
+            <div>{error}</div>
+          ))}
         </div>
-    </form>
+        <div className="modal-form-div">
+          <label>First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            onChange={updateFirstName}
+            value={firstName}
+          ></input>
+        </div>
+        <div className="modal-form-div">
+          <label>Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            onChange={updateLastName}
+            value={lastName}
+          ></input>
+        </div>
+        <div className="modal-form-div">
+          <label>User Name</label>
+          <input
+            type="text"
+            name="username"
+            onChange={updateUsername}
+            value={username}
+          ></input>
+        </div>
+        <div className="modal-form-div">
+          <label>Email</label>
+          <input
+            type="text"
+            name="email"
+            onChange={updateEmail}
+            value={email}
+          ></input>
+        </div>
+        <div className="modal-form-div">
+          <label>Profile Image</label>
+          <input
+            type="text"
+            name="profileImg"
+            onChange={updateProfileImg}
+            value={profileImg}
+          ></input>
+        </div>
+        <div className="modal-form-div">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            onChange={updatePassword}
+            value={password}
+          ></input>
+        </div>
+        <div className="modal-form-div">
+          <label>Repeat Password</label>
+          <input
+            type="password"
+            name="repeat_password"
+            onChange={updateRepeatPassword}
+            value={repeatPassword}
+            required={true}
+          ></input>
+        </div>
+        <div className="modal-button-box">
+          <div className="modal-link modal-button" onClick={onSignUp}>
+            Sign Up
+          </div>
+          <div className="modal-link modal-button" onClick={openLogin}>
+            {" "}
+            Log In
+          </div>
+        </div>
+      </form>
+    </div>
   );
 };
 
