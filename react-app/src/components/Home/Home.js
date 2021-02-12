@@ -5,6 +5,9 @@ import "react-multi-carousel/lib/styles.css";
 import { homeRecipesDisplay } from "../../store/recipes";
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "react-elastic-carousel";
+import Footer from '../Footer/index'
+
+
 function Home() {
   let vegarray = useSelector((state) => state.recipes.veg);
   let gfarray = useSelector((state) => state.recipes.gf);
@@ -127,6 +130,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

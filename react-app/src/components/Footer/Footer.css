@@ -1,0 +1,33 @@
+.footer-container {
+  border-top: 1px solid rgb(246,246, 246);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  bottom: 0px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+justify-content: center;
+  width: 1000px;
+  height: 40px;
+  font-size: 14px;
+  color: gray;
+  padding: 0 10px;
+  margin-bottom: 0;
+}
+
+.footer a {
+  padding: 0 20px;
+  font-size: 1.5em;
+}
+
+
+.footer {
+  padding-top: 30px;
+}

@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Redirect } from "react-router-dom";
 import { login } from "../../services/auth";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../store/session";
 import { setLoginModal, setSignupModal } from "../../store/modal";
+import useOutsideClick from "../OutsideClick/UseOutsideClick";
+
+
+
+
+
 const LoginForm = ({ authenticated, setAuthenticated }) => {
+   const ref = useRef();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +23,10 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   const cancel = (e) => {
     dispatch(setLoginModal(false));
   };
+
+   useOutsideClick(ref, () => {
+      dispatch(setLoginModal(false));
+   });
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -54,52 +65,54 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <form onSubmit={onLogin}>
-      <h1 className="modal-title">Log In</h1>
-      <div>
-        {errors.map((error) => (
-          <div>{error}</div>
-        ))}
-      </div>
-      <div className="modal-form-div">
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={updateEmail}
-        />
-      </div>
-      <div className="modal-form-div">
-        <label htmlFor="password">Password</label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={updatePassword}
-        />
-        <div className="modal-button-box">
-          <div className="modal-link modal-button" onClick={onLogin}>
-            Login
+    <div ref={ref}>
+      <form onSubmit={onLogin}>
+        <h1 className="modal-title">Log In</h1>
+        <div>
+          {errors.map((error) => (
+            <div>{error}</div>
+          ))}
+        </div>
+        <div className="modal-form-div">
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="text"
+            placeholder="Email"
+            value={email}
+            onChange={updateEmail}
+          />
+        </div>
+        <div className="modal-form-div">
+          <label htmlFor="password">Password</label>
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={updatePassword}
+          />
+          <div className="modal-button-box">
+            <div className="modal-link modal-button" onClick={onLogin}>
+              Login
+            </div>
+            <div className="modal-link modal-button" onClick={openSignup}>
+              {" "}
+              Sign Up
+            </div>
+            <div className="modal-link modal-button" onClick={cancel}>
+              {" "}
+              Close
+            </div>
           </div>
-          <div className="modal-link modal-button" onClick={openSignup}>
-            {" "}
-            Sign Up
-          </div>
-          <div className="modal-link modal-button" onClick={cancel}>
-            {" "}
-            Close
+          <div className="modal-button-box">
+            <div className="modal-link modal-button" onClick={demoLogin}>
+              Demo Login
+            </div>
           </div>
         </div>
-        <div className="modal-button-box">
-          <div className="modal-link modal-button" onClick={demoLogin}>
-            Demo Login
-          </div>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 

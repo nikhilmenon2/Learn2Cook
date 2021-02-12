@@ -1,7 +1,8 @@
 body {
     margin: 0;
      background-color: rgb(255, 237, 207);
-
+     overflow: auto
+    
 }
 
 video {
@@ -72,8 +73,8 @@ h1 {
 
 #home-parent-div{
   text-align: center;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 200px;
+  padding-right: 200px;
 
 
 }

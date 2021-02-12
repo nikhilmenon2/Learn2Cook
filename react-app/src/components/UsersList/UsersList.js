@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import './UsersList.css'
+import Footer from "../Footer/index";
+
 
 
 function UsersList({ authenticated, setAuthenticated }) {
@@ -41,6 +43,7 @@ function UsersList({ authenticated, setAuthenticated }) {
         <h1>Chefs at Learn2Cook </h1>
         <div id="authorcontainer">{userComponents}</div>
       </div>
+      <Footer />
     </>
   );
 }

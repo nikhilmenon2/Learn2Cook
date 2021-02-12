@@ -3,6 +3,8 @@ import { useParams, NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Favorites from "./Favorites"
 import "./UserProfile.css"
+import Footer from "../Footer/index";
+
 
 
 
@@ -53,6 +55,7 @@ function User() {
           </div>
             <Favorites sessionUser={userState} params={userId} />
         </div>
+        <Footer/>
       </>
     );
 }
