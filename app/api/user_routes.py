@@ -87,38 +87,3 @@ def postReview(userId, recipeId):
             return {"message": "received, committed"}
         else:
             return {"message": "received, rejected"}
-
-
-@user_routes.route('/<int:userId>/reviews/<int:id>', methods=['DELETE'])
-def deleteReview(userId, id):
-    if request:
-        review = Review.query.filter_by(id=id).first()
-        if review:
-            db.session.delete(review)
-            db.session.commit()
-            return {"message": "deleted"}
-        else:
-            return {"message": "no such review?"}
-
-    return {"message": "request is false?"}
-
-
-@user_routes.route('/<int:userId>/reviews/<int:reviewId>', methods=["PATCH"])
-def updateReview(userId, reviewId):
-    if request:
-        review = Review.query.filter_by(id=reviewId).first()
-        if review:
-            data = request.get_json()
-
-            overall = int(data['overall']['value'])
-            reviewStr = str(data['review'])
-
-            review.overall = overall
-            review.review = reviewStr
-
-            db.session.commit()
-            return {"message": "updated"}
-        else:
-            return {"message": "no such review?"}
-
-    return {"message": "request is false?"}
