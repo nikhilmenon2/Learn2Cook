@@ -72,7 +72,38 @@ h1 {
 
 #home-parent-div{
   text-align: center;
+  padding-left: 300px;
+  padding-right: 300px;
+
 
 }
 
 
+#hometitlediv {
+  height: 200px;
+  border-bottom: black solid 5px;
+  display: flex;
+  align-items: center;
+justify-content: center;
+  
+}
+
+#random-title-div{
+  font-size: 38px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+#carousel h1{
+  margin-bottom: 30px;
+}
+
+#spacing-div{
+  padding-top: 30px;
+  gap: 20px
+}
+
+.carousel-div{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}

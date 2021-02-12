@@ -6,7 +6,6 @@ import { homeRecipesDisplay } from "../../store/recipes";
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "react-elastic-carousel";
 function Home() {
-  const [recipes, setRecipes] = useState([]);
   let vegarray = useSelector((state) => state.recipes.veg);
   let gfarray = useSelector((state) => state.recipes.gf);
   let chickenarray = useSelector((state) => state.recipes.chicken);
@@ -87,34 +86,45 @@ function Home() {
         </video>
       </div>
       <div id="home-parent-div">
+        <div id="hometitlediv">
+          <div id="random-title-div">
+            <h3>What To Cook This Week</h3>
+          </div>
+        </div>
         <div id="spacing-div">
           <h1>🥬 Check out some Vegeterian Options 🥬</h1>
-          <Carousel
-            itemsToShow={5}
-            itemPadding={[10, 50]}
-            focusOnSelect={true}
-            breakPoints={breakPoints}
-          >
-            {vegrecipes}
-          </Carousel>
-          <h1>🌾 Check out some Gluten Free Options 🌾 </h1>
-          <Carousel
-            itemPadding={[10, 50]}
-            focusOnSelect={true}
-            breakPoints={breakPoints}
-            itemsToShow={5}
-          >
-            {gfrecipes}
-          </Carousel>
-          <h1>🐔 Get Some Chicken Dishes Tonight 🐔</h1>
-          <Carousel
-            itemPadding={[10, 50]}
-            focusOnSelect={true}
-            breakPoints={breakPoints}
-            itemsToShow={5}
-          >
-            {chickenrecipes}
-          </Carousel>
+          <div className="carousel-div">
+            <Carousel
+              itemsToShow={5}
+              itemPadding={[10, 50]}
+              focusOnSelect={true}
+              breakPoints={breakPoints}
+            >
+              {vegrecipes}
+            </Carousel>
+          </div>
+          <div className="carousel-div">
+            <h1>🌾 Check out some Gluten Free Options 🌾 </h1>
+            <Carousel
+              itemPadding={[10, 50]}
+              focusOnSelect={true}
+              breakPoints={breakPoints}
+              itemsToShow={5}
+            >
+              {gfrecipes}
+            </Carousel>
+          </div>
+          <div className="carousel-div">
+            <h1>🐔 Get Some Chicken Dishes Tonight 🐔</h1>
+            <Carousel
+              itemPadding={[10, 50]}
+              focusOnSelect={true}
+              breakPoints={breakPoints}
+              itemsToShow={5}
+            >
+              {chickenrecipes}
+            </Carousel>
+          </div>
         </div>
       </div>
     </div>
