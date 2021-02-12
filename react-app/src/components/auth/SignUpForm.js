@@ -1,11 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Redirect } from 'react-router-dom';
-import { signUp } from '../../services/auth';
-import { setLoginModal, setSignupModal } from '../../store/modal'
-import { useDispatch } from 'react-redux'
+import { Redirect } from "react-router-dom";
+import { signUp } from "../../services/auth";
+import { setLoginModal, setSignupModal } from "../../store/modal";
+import { useDispatch } from "react-redux";
 import useOutsideClick from "../OutsideClick/UseOutsideClick";
 
-const SignUpForm = ({authenticated, setAuthenticated}) => {
+const SignUpForm = ({ authenticated, setAuthenticated }) => {
+  const ref = useRef();
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -14,30 +15,38 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   const [lastName, setLastName] = useState("");
   const [profileImg, setProfileImg] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
-  const dispatch = useDispatch()
-  const ref = useRef();
-
+  const dispatch = useDispatch();
+  
+  
   const openLogin = (e) => {
-    dispatch(setSignupModal(false))
-    dispatch(setLoginModal(true))
-  }
- 
-   useOutsideClick(ref, () => {
-     dispatch(setSignupModal(false));
-   });
-   
+    dispatch(setSignupModal(false));
+    dispatch(setLoginModal(true));
+  };
+
+  useOutsideClick(ref, () => {
+    dispatch(setSignupModal(false));
+  });
+
   const onSignUp = async (e) => {
     e.preventDefault();
-
-      const user = await signUp(username, email, password, repeatPassword, firstName, lastName, profileImg);
-      if (!user.errors) {
-        dispatch(setSignupModal(false))
-        setAuthenticated(true);
-      } else {
-        setErrors(user.errors);
-      }
-
+    const user = await signUp(
+      username,
+      email,
+      password,
+      repeatPassword,
+      firstName,
+      lastName,
+      profileImg
+    );
+    console.log(user)
+    if (!user.errors) {
+      dispatch(setSignupModal(false));
+      setAuthenticated(true);
+    } else {
+      setErrors(user.errors);
+    }
   };
+
 
   const updateUsername = (e) => {
     setUsername(e.target.value);
@@ -72,7 +81,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   }
 
   return (
-    <div ref={ref}>
+    <div className="form-parent" ref={ref}>
       <form onSubmit={onSignUp}>
         <h1 className="modal-title">Sign Up</h1>
         <div>
@@ -117,7 +126,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
           ></input>
         </div>
         <div className="modal-form-div">
-          <label>Profile Image</label>
+          <label>Profile Image Link</label>
           <input
             type="text"
             name="profileImg"
@@ -135,7 +144,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
           ></input>
         </div>
         <div className="modal-form-div">
-          <label>Repeat Password</label>
+          <label>Confirm Password</label>
           <input
             type="password"
             name="repeat_password"

@@ -7,7 +7,7 @@
   background-color: white;
   width: 100%;
   z-index: 100;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(197, 197, 197);
 }
 
 #nav-bar-logo-picture {
@@ -39,15 +39,18 @@
   padding: 20px;
   border-radius: 5px;
   display: inline-block;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .modal-box {
-  background-color: rgb(255, 237, 207);
+  background-color:white;
   padding: 20px;
   border: 2px solid black;
   border-radius: 10px;
   z-index: 100;
-  width: 300px;
+  width: 400px;
+  height: auto;
 
 }
 
@@ -89,14 +92,21 @@
 
 .modal-text {
   color: rgb(255, 76, 76);
-  font-size: 22px;
+  font-size: 10px;
   margin: 5px;
   width: 400px;
 }
 
 .modal-button {
-  color: rgb(255, 237, 207);
-  background-color: rgb(11, 75, 128);
+  margin-right: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  background: rgb(255, 76, 76);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
 .hidden {
@@ -106,9 +116,9 @@
 
 .modal-form-div label {
   display: block;
-  text-decoration: underline;
-  font-size: 26px;
-  color:rgb(255, 76, 76);
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
   margin-bottom: 5px;
   margin-top: 5px;
 }
@@ -131,7 +141,14 @@
 
 .modal-title {
   text-align: center;
-  color: rgb(255, 76, 76);
+  color: black;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 10;
+}
+
+
+.form-parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

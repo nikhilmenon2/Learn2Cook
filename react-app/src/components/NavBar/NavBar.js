@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import ModalContainer from './ModalContainer'
 import LoginForm from '../auth/LoginForm'
 import SignUpForm from '../auth/SignUpForm'
+import { setUser } from "../../store/session";
+import { login } from "../../services/auth";
 import IncompleteForm from '../auth/IncompleteForm'
 import TextForm from '../auth/TextForm'
 
@@ -25,6 +27,18 @@ const NavBar = ({ setAuthenticated }) => {
     dispatch(setSignupModal(true))
     dispatch(setLoginModal(false))
   }
+
+
+ const demoLogin = async (e) => {
+   e.preventDefault();
+   const user = await login("demo@aa.io", "password");
+     setAuthenticated(true);
+     dispatch(setUser(user));
+   
+ };
+
+
+
   return (
     <div id="top-nav-bar">
       <ModalContainer hidden={!modals.login} cancel={setLoginModal}>
@@ -62,6 +76,15 @@ const NavBar = ({ setAuthenticated }) => {
               Recipes
             </NavLink>
             <div
+              to="/sign-up"
+              exact={true}
+              onClick={demoLogin}
+              className="nav-link"
+              activeClassName="active"
+            >
+              Demo
+            </div>
+            <div
               to="/login"
               exact={true}
               onClick={openLogin}
@@ -70,6 +93,7 @@ const NavBar = ({ setAuthenticated }) => {
             >
               Login
             </div>
+
             <div
               to="/sign-up"
               exact={true}

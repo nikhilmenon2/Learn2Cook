@@ -74,8 +74,8 @@ h1 {
 
 #home-parent-div{
   text-align: center;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
 
 
 }
@@ -101,7 +101,7 @@ justify-content: center;
 }
 
 #spacing-div{
-  padding-top: 30px;
+  padding-top: 100px;
   gap: 20px
 }
 

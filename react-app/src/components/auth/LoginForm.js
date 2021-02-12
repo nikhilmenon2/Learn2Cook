@@ -6,12 +6,8 @@ import { setUser } from "../../store/session";
 import { setLoginModal, setSignupModal } from "../../store/modal";
 import useOutsideClick from "../OutsideClick/UseOutsideClick";
 
-
-
-
-
 const LoginForm = ({ authenticated, setAuthenticated }) => {
-   const ref = useRef();
+  const ref = useRef();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,9 +17,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     dispatch(setLoginModal(false));
   };
 
-   useOutsideClick(ref, () => {
-      dispatch(setLoginModal(false));
-   });
+  useOutsideClick(ref, () => {
+    dispatch(setLoginModal(false));
+  });
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -62,9 +58,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <div ref={ref}>
+    <div className="form-parent" ref={ref}>
       <form onSubmit={onLogin}>
-        <h1 className="modal-title">Log In</h1>
+        <h1 className="modal-title">Login Form</h1>
         <div>
           {errors.map((error) => (
             <div>{error}</div>

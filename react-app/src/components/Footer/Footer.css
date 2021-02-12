@@ -25,9 +25,32 @@ justify-content: center;
 .footer a {
   padding: 0 20px;
   font-size: 1.5em;
+  text-decoration: none;
 }
 
+i {
+  text-decoration: none;
+}
 
 .footer {
   padding-top: 30px;
+}
+#linkedinlogo {
+  color: blue;
+  text-decoration: none;
+}
+
+#githublogo {
+  color: black;
+  text-decoration: none;
+}
+#angellogo {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+    outline: none;
+    box-shadow: none !important;
 }
