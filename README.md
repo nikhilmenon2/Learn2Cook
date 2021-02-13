@@ -1,9 +1,8 @@
 # Learn2Cook
 
-Is a full stack application that draws inspiration from New York Times Cooking and Netflix. 
+Is a full stack application that draws inspiration from New York Times Cooking and Netflix.
 
-As more and more people are learning to be more experimental in their culinary prowess, there should be a website that is dedicated to those who are just starting out to learn. Users can look at recipes, read and leave reviews, as well as favoriting what they love to make, for easier access to them! 
-
+As more and more people are learning to be more experimental in their culinary prowess, there should be a website that is dedicated to those who are just starting out to learn. Users can look at recipes, read and leave reviews, as well as favoriting what they love to make, for easier access to them!
 
 <!-- PROJECT LOGO -->
 <br />
@@ -33,8 +32,12 @@ As more and more people are learning to be more experimental in their culinary p
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
-      <a href="#live-link">Live Link To Project</a>
-      <a href="#demonstration">Demonstration of Project</a>
+    </li>
+    <li>
+     <a href="#live-link">Live Link To Project</a>
+    </li>
+    <li>
+     <a href="#demonstration">Demonstration of Project</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -54,32 +57,29 @@ As more and more people are learning to be more experimental in their culinary p
 
 ## About The Project
 
+A full stack application that draws inspiration from New York Times Cooking and Netflix.
 
-Learn2Cook is a full stack application that draws inspiration from New York Times Cooking and Netflix. 
-
-As more and more people are learning to be more experimental in their culinary prowess, there should be a website that is dedicated to those who are just starting out to learn. Users can look at recipes, read and leave reviews, as well as favoriting what they love to make, for easier access to them! 
+As more and more people are learning to be more experimental in their culinary prowess, there should be a website that is dedicated to those who are just starting out to learn. Users can look at recipes, read and leave reviews, as well as favoriting what they love to make, for easier access to them!
 
 <br><br/>
-
 
 ## Live Link
 
-
-Live Link For This Project Can Be Found[Here](http://learn2cook.herokuapp.com/)
+Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 
 <br><br/>
 
-
 ## Demonstration
 
-
-![Demonstration](the_path_to/example.gif))
+![Demonstration](images/example.gif)
 
 <br><br/>
 
 ## Built With
+
 Python
 <br>
+
 <p align="left">
   <a href="https://www.python.org/">
     <img src="images/python.svg" alt="Python" width="80" height="80">
@@ -123,7 +123,7 @@ Redux
     <a href="https://redux.js.org/">
     <img src="images/redux.svg" alt="Redux" width="80" height="80">
   </a>
-<br>  
+<br>
 
 <p/>
 
@@ -152,10 +152,10 @@ This is an example of how to list things you need to use the software and how to
    ```bash
    npm install
    ```
-3.  Install Pipenv Dependencies in root folder
-    ```bash
-      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-      ```
+3. Install Pipenv Dependencies in root folder
+   ```bash
+     pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
+   ```
 4. Create a **.env** file based on the example with proper settings for your
    development environment
 
@@ -181,19 +181,21 @@ This is an example of how to list things you need to use the software and how to
 
 7. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
 
-***
-*IMPORTANT!*
-   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
-   You can do this by running:
+---
 
-   ```bash
-   pipenv lock -r > requirements.txt
-   ```
+_IMPORTANT!_
+If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
+You can do this by running:
 
-*ALSO IMPORTANT!*
-   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
-***
+```bash
+pipenv lock -r > requirements.txt
+```
+
+_ALSO IMPORTANT!_
+psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
+There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
+
+---
 
 <!-- LICENSE -->
 
