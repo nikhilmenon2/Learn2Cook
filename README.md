@@ -14,7 +14,7 @@ As more and more people are learning to be more experimental in their culinary p
   <h3 align="center">Learn2Cook</h3>
 
   <p align="center">
-    A Begginer's Cooking Community
+    A Beginner's Cooking Community
     <br />
     <a href="https://github.com/nikhilmenon2/Learn2Cook"><strong>Explore the docs »</strong></a>
     <br />
