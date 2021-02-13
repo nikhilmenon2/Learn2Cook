@@ -9,7 +9,7 @@ As more and more people are learning to be more experimental in their culinary p
 <br />
 <p align="center">
   <a href="https://github.com/nikhilmenon2/Learn2Cook">
-    <img src="images/logo2.png" alt="Logo" width="80" height="80">
+    <img src="images/logo2.png" alt="Logo" width="195" height="75">
   </a>
 
   <h3 align="center">AptBnb</h3>
@@ -60,37 +60,50 @@ As more and more people are learning to be more experimental in their culinary p
 <br><br/>
 
 ## Built With
+Python
 <br>
 <p align="left">
   <a href="https://www.python.org/">
+    Python
     <img src="images/python.svg" alt="Python" width="80" height="80">
   </a>
 <br>
 <br>
 <p align="left">
-  <a href="https://www.javascript.com/">
-    <img src="images/javascript.svg" alt="Javascript" width="379" height="80">
+  <a href="https://www.sqlalchemy.org/">
+    SQLAlchemy
+    <img src="images/sqlalchemy.jpg" alt="SQlAclehemy" width="379" height="80">
   </a>
 <br>
-br>
-    <a href="https://www.postgresql.org/">
-    <img src="images/postgresql.svg" alt="Postgres" width="80" height="80">
+<p align="left">
+  <a href="https://www.javascript.com/">
+    Javascript
+    <img src="images/javascript.svg" alt="Javascript" width="80" height="80">
   </a>
-<br> 
-
+<br>
 <br>
 <p align="left">
   <a href="https://flask.palletsprojects.com/en/1.1.x/">
+    Flask
     <img src="images/flask.svg" alt="Flask" width="80" height="80">
   </a>
 <br>
+
+<br>
+    <a href="https://www.postgresql.org/">
+    PostGresSQL
+    <img src="images/postgresql.svg" alt="Postgres" width="80" height="80">
+  </a>
+<br> 
 <br>
   <a href="https://reactjs.org/">
+    React
     <img src="images/react.svg" alt="React" width="80" height="80">
   </a>
 <br>  
 <br>
     <a href="https://redux.js.org/">
+    Redux
     <img src="images/redux.svg" alt="Redux" width="80" height="80">
   </a>
 <br>  
