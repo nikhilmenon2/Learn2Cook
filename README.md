@@ -76,8 +76,9 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 <br><br/>
 
 ## Built With
-
-** Python ** 
+<br>
+<br>
+**Python** 
 <br>
 <br>
 <p align="left">
@@ -86,7 +87,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>
 <br>
-** SQLAlchemy **
+**SQLAlchemy**
 <br>
 <br>
 <p align="left">
@@ -95,7 +96,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>
 <br>
-** Javascript ** 
+**Javascript** 
 <br>
 <br>
 <p align="left">
@@ -103,8 +104,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
     <img src="images/javascript.svg" alt="Javascript" width="80" height="80">
   </a>
 <br>
-<br>
-** Flask **
+**Flask**
 <br>
 <br>
 <p align="left">
@@ -113,7 +113,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>
 <br>
-** PostGresSQL **
+**PostGresSQ**
 <br>
 <br>
     <a href="https://www.postgresql.org/">
@@ -121,7 +121,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br> 
 <br>
-** React **
+**React**
 <br>
 <br>
   <a href="https://reactjs.org/">
