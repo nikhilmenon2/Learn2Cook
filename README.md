@@ -77,8 +77,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 
 ## Built With
 
-Python
-<br>
+#Python
 <br>
 <br>
 <p align="left">
@@ -87,8 +86,7 @@ Python
   </a>
 <br>
 <br>
-<br>
-SQLAlchemy
+#SQLAlchemy
 <br>
 <br>
 <p align="left">
@@ -97,8 +95,7 @@ SQLAlchemy
   </a>
 <br>
 <br>
-<br>
-Javascript
+#Javascript
 <br>
 <br>
 <br>
@@ -109,7 +106,7 @@ Javascript
 <br>
 <br>
 <br>
-Flask
+#Flask
 <br>
 <br>
 <br>
@@ -118,8 +115,8 @@ Flask
     <img src="images/flask.svg" alt="Flask" width="80" height="80">
   </a>
 <br>
-PostGresSQL
 <br>
+#PostGresSQL
 <br>
 <br>
     <a href="https://www.postgresql.org/">
@@ -127,9 +124,7 @@ PostGresSQL
   </a>
 <br> 
 <br>
-<br>
-React
-<br>
+#React
 <br>
 <br>
   <a href="https://reactjs.org/">
@@ -137,9 +132,7 @@ React
   </a>
 <br>  
 <br>
-<br>
-Redux
-<br>
+#Redux
 <br>
 <br>
     <a href="https://redux.js.org/">
