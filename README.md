@@ -104,6 +104,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
     <img src="images/javascript.svg" alt="Javascript" width="80" height="80">
   </a>
 <br>
+<br>
 **Flask**
 <br>
 <br>
