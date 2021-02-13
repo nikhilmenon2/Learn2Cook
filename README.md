@@ -12,12 +12,12 @@ As more and more people are learning to be more experimental in their culinary p
     <img src="images/logo2.png" alt="Logo" width="195" height="75">
   </a>
 
-  <h3 align="center">AptBnb</h3>
+  <h3 align="center">Learn2Cook</h3>
 
   <p align="center">
-    A Clone of the popular Air Bnb website
+    A Begginer's Cooking Community
     <br />
-    <a href="https://github.com/nikhilmenon2/airbnbclone"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/nikhilmenon2/Learn2Cook"><strong>Explore the docs »</strong></a>
     <br />
     <br />
 
@@ -33,6 +33,8 @@ As more and more people are learning to be more experimental in their culinary p
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
+      <a href="#live-link">Live Link To Project</a>
+      <a href="#demonstration">Demonstration of Project</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -59,51 +61,66 @@ As more and more people are learning to be more experimental in their culinary p
 
 <br><br/>
 
+
+## Live Link
+
+
+Live Link For This Project Can Be Found[Here](http://learn2cook.herokuapp.com/)
+
+<br><br/>
+
+
+## Demonstration
+
+
+![Demonstration](the_path_to/example.gif))
+
+<br><br/>
+
 ## Built With
 Python
 <br>
 <p align="left">
   <a href="https://www.python.org/">
-    Python
     <img src="images/python.svg" alt="Python" width="80" height="80">
   </a>
 <br>
+SQLAlchemy
 <br>
 <p align="left">
   <a href="https://www.sqlalchemy.org/">
-    SQLAlchemy
     <img src="images/sqlalchemy.jpg" alt="SQlAclehemy" width="379" height="80">
   </a>
 <br>
+Javascript
+<br>
 <p align="left">
   <a href="https://www.javascript.com/">
-    Javascript
     <img src="images/javascript.svg" alt="Javascript" width="80" height="80">
   </a>
 <br>
+Flask
 <br>
 <p align="left">
   <a href="https://flask.palletsprojects.com/en/1.1.x/">
-    Flask
     <img src="images/flask.svg" alt="Flask" width="80" height="80">
   </a>
 <br>
-
+PostGresSQL
 <br>
     <a href="https://www.postgresql.org/">
-    PostGresSQL
     <img src="images/postgresql.svg" alt="Postgres" width="80" height="80">
   </a>
 <br> 
+React
 <br>
   <a href="https://reactjs.org/">
-    React
     <img src="images/react.svg" alt="React" width="80" height="80">
   </a>
 <br>  
+Redux
 <br>
     <a href="https://redux.js.org/">
-    Redux
     <img src="images/redux.svg" alt="Redux" width="80" height="80">
   </a>
 <br>  
@@ -121,20 +138,62 @@ To get a local copy up and running follow these simple steps.
 This is an example of how to list things you need to use the software and how to install them.
 
 - npm
-  ```sh
+  ```bash
   npm install npm@latest -g
   ```
 
 ### Installation
 
 1. Clone the repo
-   ```sh
-   git clone https://github.com/nikhilmenon2/airbnbclone.git
+   ```bash
+   git clone https://github.com/nikhilmenon2/Learn2Cook
    ```
-2. Install NPM packages
-   ```sh
+2. Install NPM packages in /reactapp folder
+   ```bash
    npm install
    ```
+3.  Install Pipenv Dependencies in root folder
+    ```bash
+      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
+      ```
+4. Create a **.env** file based on the example with proper settings for your
+   development environment
+
+5. Setup your PostgreSQL user, password and database and make sure it matches your **.env** file
+
+6. Get into your pipenv, migrate your database, seed your database, and run your flask app
+
+   ```bash
+   pipenv shell
+   ```
+
+   ```bash
+   flask db upgrade
+   ```
+
+   ```bash
+   flask seed all
+   ```
+
+   ```bash
+   flask run
+   ```
+
+7. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
+
+***
+*IMPORTANT!*
+   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
+   You can do this by running:
+
+   ```bash
+   pipenv lock -r > requirements.txt
+   ```
+
+*ALSO IMPORTANT!*
+   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
+   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
+***
 
 <!-- LICENSE -->
 
@@ -148,4 +207,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Email - nikhilmenon@comcast.net
 
-Project Link: [https://github.com/nikhilmenon2/Learn2Cook](https://github.com/nikhilmenon2/Learn2Cook)
+Project Link: [GitHub Project Link](https://github.com/nikhilmenon2/Learn2Cook)
