@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import './UsersList.css'
+import "./UsersList.css";
 import Footer from "../Footer/index";
 
-
-
 function UsersList({ authenticated, setAuthenticated }) {
-  
-  
-  
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -22,7 +17,7 @@ function UsersList({ authenticated, setAuthenticated }) {
 
   const userComponents = users.map((user) => {
     return (
-      <div className="authordiv"  key={user.id}>
+      <div className="authordiv" key={user.id}>
         <NavLink
           id="author-link"
           to={`/users/${user.id}`}

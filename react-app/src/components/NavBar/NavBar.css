@@ -65,6 +65,7 @@
   height: 100vh;
   background-color: rgba(128, 128, 128, 0.541);
   z-index: 100;
+  overflow: hidden;
 }
 
 .modal-link {

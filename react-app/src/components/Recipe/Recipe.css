@@ -78,6 +78,7 @@
 #review-parent-div{
     display: flex;
     flex-direction: column;
+    padding-bottom: 200px;
 }
 
 #list-container{

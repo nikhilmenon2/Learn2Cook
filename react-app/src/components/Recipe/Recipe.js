@@ -41,7 +41,7 @@ function Recipe() {
   const reviewcomp = reviews.map((review) => {
     return (
       <div className="reviewbox" key={review.id}>
-        <NavLink to={`/recipes/${review.user.id}`}>
+        <NavLink to={`/users/${review.userId}`}>
           <ReactStars
             count={5}
             size={24}

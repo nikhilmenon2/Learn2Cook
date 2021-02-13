@@ -25,20 +25,15 @@ function User() {
 
     const userState = useSelector(state => state.session.user)
 
-    const sessId = userState.id
-    console.log(userId)
+    // const sessId = userState.id
+    // let isUserProfile
+    // if (userId === sessId) {
+    //     isUserProfile = "a thing"
+    // }
 
-    console.log(sessId)
-
-    let isUserProfile
-
-    if (userId === sessId) {
-        isUserProfile = "a thing"
-    }
-
-    if (!user) {
-        return null;
-    }
+    // if (!user) {
+    //     return null;
+    // }
 
     return (
       <>
