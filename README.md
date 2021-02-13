@@ -79,27 +79,39 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 
 Python
 <br>
-
+<br>
+<br>
 <p align="left">
   <a href="https://www.python.org/">
     <img src="images/python.svg" alt="Python" width="80" height="80">
   </a>
 <br>
+<br>
+<br>
 SQLAlchemy
+<br>
 <br>
 <p align="left">
   <a href="https://www.sqlalchemy.org/">
     <img src="images/sqlalchemy.jpg" alt="SQlAclehemy" width="379" height="80">
   </a>
 <br>
+<br>
+<br>
 Javascript
+<br>
+<br>
 <br>
 <p align="left">
   <a href="https://www.javascript.com/">
     <img src="images/javascript.svg" alt="Javascript" width="80" height="80">
   </a>
 <br>
+<br>
+<br>
 Flask
+<br>
+<br>
 <br>
 <p align="left">
   <a href="https://flask.palletsprojects.com/en/1.1.x/">
@@ -108,17 +120,27 @@ Flask
 <br>
 PostGresSQL
 <br>
+<br>
+<br>
     <a href="https://www.postgresql.org/">
     <img src="images/postgresql.svg" alt="Postgres" width="80" height="80">
   </a>
 <br> 
+<br>
+<br>
 React
+<br>
+<br>
 <br>
   <a href="https://reactjs.org/">
     <img src="images/react.svg" alt="React" width="80" height="80">
   </a>
 <br>  
+<br>
+<br>
 Redux
+<br>
+<br>
 <br>
     <a href="https://redux.js.org/">
     <img src="images/redux.svg" alt="Redux" width="80" height="80">
