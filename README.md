@@ -77,7 +77,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 
 ## Built With
 
-#Python
+# Python
 <br>
 <br>
 <p align="left">
@@ -86,7 +86,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>
 <br>
-#SQLAlchemy
+# SQLAlchemy
 <br>
 <br>
 <p align="left">
@@ -95,8 +95,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>
 <br>
-#Javascript
-<br>
+# Javascript
 <br>
 <br>
 <p align="left">
@@ -105,9 +104,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>
 <br>
-<br>
-#Flask
-<br>
+# Flask
 <br>
 <br>
 <p align="left">
@@ -116,7 +113,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>
 <br>
-#PostGresSQL
+# PostGresSQL
 <br>
 <br>
     <a href="https://www.postgresql.org/">
@@ -124,7 +121,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br> 
 <br>
-#React
+# React
 <br>
 <br>
   <a href="https://reactjs.org/">
@@ -132,7 +129,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
   </a>
 <br>  
 <br>
-#Redux
+# Redux
 <br>
 <br>
     <a href="https://redux.js.org/">
