@@ -125,7 +125,7 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 <br>
   
   
-**PostGresSQ**
+**PostGresSQL**
 <br>
 <br>
     <a href="https://www.postgresql.org/">
