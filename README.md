@@ -1,8 +1,10 @@
 # Learn2Cook
 
-Is a full stack application that draws inspiration from New York Times Cooking and Netflix.
+Is a full-stack application that draws inspiration from New York Times Cooking and Netflix.
 
-As more and more people are learning to be more experimental in their culinary prowess, there should be a website that is dedicated to those who are just starting out to learn. Users can look at recipes, read and leave reviews, as well as favoriting what they love to make, for easier access to them!
+As more and more people are learning to be more experimental in their culinary prowess, there should be a website that is dedicated to those who are just starting to learn. Users can look at recipes, read and leave reviews, as well as favoriting what they love to make, for easier access to them!
+
+More information can be found on this project at it's [Wiki](https://github.com/nikhilmenon2/Learn2Cook/wiki)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -14,7 +16,7 @@ As more and more people are learning to be more experimental in their culinary p
   <h3 align="center">Learn2Cook</h3>
 
   <p align="center">
-    A Begginer's Cooking Community
+    A Beginner's Cooking Community
     <br />
     <a href="https://github.com/nikhilmenon2/Learn2Cook"><strong>Explore the docs »</strong></a>
     <br />
@@ -76,49 +78,75 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 <br><br/>
 
 ## Built With
-
-Python
+<br>
 <br>
 
+**Python** 
+<br>
+<br>
 <p align="left">
   <a href="https://www.python.org/">
     <img src="images/python.svg" alt="Python" width="80" height="80">
   </a>
 <br>
-SQLAlchemy
+<br>
+  
+  
+**SQLAlchemy**
+<br>
 <br>
 <p align="left">
   <a href="https://www.sqlalchemy.org/">
     <img src="images/sqlalchemy.jpg" alt="SQlAclehemy" width="379" height="80">
   </a>
 <br>
-Javascript
+<br>
+  
+  
+**Javascript** 
+<br>
 <br>
 <p align="left">
   <a href="https://www.javascript.com/">
     <img src="images/javascript.svg" alt="Javascript" width="80" height="80">
   </a>
 <br>
-Flask
+<br>
+  
+  
+**Flask**
+<br>
 <br>
 <p align="left">
   <a href="https://flask.palletsprojects.com/en/1.1.x/">
     <img src="images/flask.svg" alt="Flask" width="80" height="80">
   </a>
 <br>
-PostGresSQL
+<br>
+  
+  
+**PostGresSQL**
+<br>
 <br>
     <a href="https://www.postgresql.org/">
     <img src="images/postgresql.svg" alt="Postgres" width="80" height="80">
   </a>
 <br> 
-React
+<br>
+
+
+**React**
+<br>
 <br>
   <a href="https://reactjs.org/">
     <img src="images/react.svg" alt="React" width="80" height="80">
   </a>
 <br>  
-Redux
+<br>
+
+
+**Redux**
+<br>
 <br>
     <a href="https://redux.js.org/">
     <img src="images/redux.svg" alt="Redux" width="80" height="80">
