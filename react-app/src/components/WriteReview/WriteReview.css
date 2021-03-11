@@ -10,6 +10,7 @@ border-radius: 6px;
 display: inline-block;
 transition: all 0.3s ease 0s;
 margin-top: 20px;
+cursor: pointer;
 }
 
 #writereview_textarea{

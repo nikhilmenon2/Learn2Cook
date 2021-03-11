@@ -7,6 +7,7 @@
   border-radius: 5px;
   display: inline-block;
   border: none;
+  cursor: pointer;
   width: 55%;
   margin-top: 20px;
 }

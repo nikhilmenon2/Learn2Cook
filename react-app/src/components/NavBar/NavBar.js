@@ -82,7 +82,7 @@ const NavBar = ({ setAuthenticated }) => {
               className="nav-link"
               activeClassName="active"
             >
-              Demo
+              Demo LogIn
             </div>
             <div
               to="/login"

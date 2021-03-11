@@ -5,8 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import { homeRecipesDisplay } from "../../store/recipes";
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "react-elastic-carousel";
-import Footer from '../Footer/index'
-
+import Footer from "../Footer/index";
 
 function Home() {
   let vegarray = useSelector((state) => state.recipes.veg);
@@ -72,14 +71,14 @@ function Home() {
     );
   });
 
-   const breakPoints = [
-     { width: 1, itemsToShow: 1 },
-     { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
-     { width: 850, itemsToShow: 3 },
-     { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
-     { width: 1450, itemsToShow: 5 },
-     { width: 1750, itemsToShow: 6 },
-   ];
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
+    { width: 850, itemsToShow: 3 },
+    { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+    { width: 1450, itemsToShow: 5 },
+    { width: 1750, itemsToShow: 6 },
+  ];
 
   return (
     <div>
@@ -130,7 +129,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
