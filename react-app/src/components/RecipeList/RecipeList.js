@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./RecipeList.css";
-import { Checkbox, Input } from "@chakra-ui/react";
-// import CheckBox from "./CheckBox/CheckBox";
+import {Input } from "@chakra-ui/react";
 import Footer from "../Footer/index";
 
 function RecipeList() {

@@ -63,7 +63,6 @@ for recipe in data['recipes']:
         instructionTable.append(ingredientSeed)
     
     
-    
     for each in recipe['analyzedInstructions']:
         i = i + 1
         for step in each['steps']:
@@ -77,11 +76,6 @@ for recipe in data['recipes']:
 
             }
             ingredientTable.append(instructionsSeed)
-
-
-# print(recipeTable)
-# print(instructionTable)
-# print(ingredientTable)
 
 
 with open('recipeTableSeeder.json', 'w') as f:
