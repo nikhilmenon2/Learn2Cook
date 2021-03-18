@@ -6,7 +6,7 @@ url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/rando
 querystring = {"number": "50"}
 
 headers = {
-    'x-rapidapi-key': "52c0634099mshe1bd7382624fc80p16320ajsn6a322fd0e228",
+    'x-rapidapi-key': "",
     'x-rapidapi-host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
 }
 
