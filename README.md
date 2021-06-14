@@ -71,9 +71,6 @@ Live Link For This Project Can Be Found [Here](http://learn2cook.herokuapp.com/)
 
 <br><br/>
 
-## Demonstration
-
-![Demonstration](images/example.gif)
 
 <br><br/>
 
